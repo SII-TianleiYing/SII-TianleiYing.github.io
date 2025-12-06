@@ -1,1 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="ConceptFusion: Open-set Multimodal 3D Mapping">
+  <meta name="keywords" content="ConceptFusion, 3D Mapping, SLAM, Open-set, Multimodal, Foundation models, CLIP">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConceptFusion: Open-set Multimodal 3D Mapping</title>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="skin/js/0cb72bf793124005bb7b16a61707859f.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="skin/css/06f15d9893614ea882e566e52107cb4f.css"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="skin/css/bulma.min.css">
+  <link rel="stylesheet" href="skin/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="skin/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="skin/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="skin/css/academicons.min.css">
+  <link rel="stylesheet" href="skin/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="skin/js/jquery.min.js"></script>
+  <script defer src="skin/js/fontawesome.all.min.js"></script>
+  <script src="skin/js/bulma-carousel.min.js"></script>
+  <script src="skin/js/bulma-slider.min.js"></script>
+  <script src="skin/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/SII-TianleiYing">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Related Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/SII-TianleiYing/AbDiff">
+            AbDiff
+          </a>
+          <a class="navbar-item" href="https://github.com/SII-TianleiYing/AbFold">
+           AbFold
+          </a>
+          <a class="navbar-item" href="https://github.com/SII-TianleiYing/iMano">
+           iMano
+          </a>
+       
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">AbFold -- an AlphaFold Based Transfer Learning Model for Accurate Antibody Structure Prediction</h1>
+
+          <div class="is-size-6 publication-authors">
+
+            <span class="author-block">
+            Peng Chao<sup>1</sup>,</span>
+
+                 <span class="author-block">
+             Zelong Wang<sup>1</sup>,</span>
+      <span class="author-block">
+             Peize Zhao<sup>3</sup>,</span>
+
+                    <span class="author-block">
+              Weifeng Ge<sup>1</sup><sup>,</sup><sup>2</sup><sup>,</sup><sup>*</sup>,</span>
+
+                 <span class="author-block">
+           Charles Huang<sup>2</sup><sup>,</sup><sup>3</sup><sup>,</sup><sup>*</sup></span>
+
+
+          </div>
+
+
+
+          <div class="is-size-7 publication-authors">
+      
+            <span class="author-block"><sup>&#8224;</sup>
+             1 College of Computer Science and Artificial Intelligence, Fudan University, Shanghai, China. 2 Hong Kong Graduate School of Advanced Studies, Hong Kong 3 Palindromic Labs Limited, Hong Kong * Corresponding author. 
+              
+              </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="skin/AbFold_bioRxiv.pdf"
+                   class="external-link button is-normal " >
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://www.biorxiv.org/content/10.1101/2023.04.20.537598v1"
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="ai ai-biorxiv"></i>
+                  </span>
+                  <span>BioRxiv</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+               <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Tutorial Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal ">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="#"
+                   class="external-link button is-normal" disabled="true">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!--/ Paper video. -->
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+Antibodies are a group of proteins generated by B cells, which are crucial for the immune system. The importance of antibodies is ever-growing in pharmaceutics and biotherapeutics. Despite recent advancements pioneered by AlphaFold in general protein 3D structure prediction, accurate structure prediction of antibodies still lags behind, primarily due to the difficulty in modeling the Complementarity-determining regions (CDRs), especially the most variable CDR-H3 loop.  
+          </p>
+          <p>
+This paper presents AbFold, a transfer learning antibody structure prediction model with 3D point cloud refinement and unsupervised learning techniques. AbFold consistently produces state-of-the-art results on the prediction accuracy of the six CDR loops. The predictions of AbFold achieve an average RMSD of 1.51 Å for both heavy and light chains and an average RMSD of 3.04 Å for CDR-H3, bettering current models AlphaFold and IgFold. AbFold will contribute to antibody structure prediction and design processes.        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Approach</h2>
+
+        <!-- Interpolating. -->
+        <!-- <h3 class="title is-4">Construct pixel-aligned features</h3> -->
+        <div class="content has-text-justified">
+         
+          <img src="skin/a1.png" />
+           <p>
+Starting from antibody amino acid sequences, AbFold not only extracts information from homologous sequences but also leverages a pre-trained antibody language model to extract sequence features. By fusing homologous sequence features and language model features through a deep neural network, AbFold dynamically models the three-dimensional structure of antibodies. In terms of input, AbFold accepts the heavy-chain and light-chain sequences of antibodies. First, it uses MMseqs2 to search the Uniref90 protein sequence database, obtain homologous sequences of the input sequence, and generate a multiple sequence alignment (MSA). Next, transfer learning is applied to extract multi-dimensional features of the homologous sequences (denoted as s1) and the interaction information between each pair of amino acids in the sequence (denoted as z) from AlphaFold2. Meanwhile, the antibody sequences are input into AntiBERTy, a protein language model pre-trained on antibody sequences, to extract the language model features of the sequences; these features are further input into the IgFold feature encoding module to generate multi-dimensional feature information (denoted as s2). Subsequently, a deep neural network fuses the multi-dimensional feature information from s1 and s2 to obtain comprehensive sequence features (denoted as s). Through a triangular self-attention module, the updated multi-dimensional features s and the pairwise amino acid information z are mutually updated. Finally, the updated s and z are input into the structure prediction module, which dynamically predicts the three-dimensional structure of the antibody using an invariant point attention mechanism and a variational autoencoder.        </div>
+        <br/>
+      </div>
+    </div>
+
+
+
+    <div class="columns is-centered">
+   
+      <!-- Zero-shot pixel alignment -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Achieve Full-Atomic Precision Prediction of Antibody Structures</h2>
+          <div class="interpolation-image-wrapper-zero-shot">
+            <img src="skin/a2.png" />
+          </div>
+          <p>
+AbFold enables end-to-end modeling of antibody conformations with full-atomic precision. First, it uses MMseqs2 to search the Uniref90 sequence database to obtain homologous sequences of the antibody sequence and their multiple sequence alignments (MSAs), and extracts language model features via the antibody language model AntiBERTy. Then, transfer learning is employed to extract homologous sequence features and language model features from AlphaFold-Multimer and IgFold, respectively. Subsequently, these two types of features are fused through an information fusion module based on fully connected layers to generate the final sequence features, which are then input into a neural network based on a variational autoencoder for dynamic modeling of antibody structures.        </div>
+      </div>
+      <!--/ Zero-shot pixel alignment -->
+
+      <!-- Long-tailed concepts -->
+      <div class="column">
+        <h2 class="title is-3">Higher-Precision CDR H3 Loop</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <div class="interpolation-image-wrapper-fine-grained">
+              <img src="skin/a3.png" />
+            </div>
+            <p>
+We compared AbFold with other antibody structure prediction methods on 153 test antibodies. The results show that in the structural prediction of CDR loops, AbFold exhibits the lowest error, and its predicted structures are closer to the native structures. Among the six CDR loops, AbFold achieves the lowest average error in five loops except the H1 loop, and the average error of its H1 loop prediction is only 0.02 Å higher than the optimal result. For the CDR H3 loop, which is the most difficult to model, AbFold has an average RMSD of 2.30 Å. In CDR regions with strong structural variability, AbFold’s RMSD is significantly lower than that of other methods including AlphaFold2-Multimer, indicating that AbFold has stronger modeling ability for dynamic structures.          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Long-tailed concepts -->
+
+
+ 
+
+
+    <!--/ Click-query video -->
+
+  </div>
+</section>
+
+
+
+
+
+
+<section class="section" id="concurrent work">
+  <div class="container is-max-desktop content">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Our Other Research</h2>
+
+        <div class="content has-text-justified">
+       
+          <p>
+            <a href="https://github.com/SII-TianleiYing/AbDiff">AbDiff</a> 
+            Generative Prediction of Antibody Conformational Ensembles Using Denoising Diffusion Probabilistic Models
+            
+          </p>
+           <p>
+            <a href="https://github.com/SII-TianleiYing/iMan">iMano</a> 
+          Artificial intelligence empowers various types of antibody human sources
+            
+          </p>
+     
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  $(function() {
+  var screenWidth = $(window).width();
+  if (screenWidth >= 800) {
+    $('#gpt-video-1').attr('autoplay', 'autoplay');
+  }
+  if (screenWidth >= 800) {
+    $('#gpt-video-2').attr('autoplay', 'autoplay');
+  }
+  if (screenWidth >= 800) {
+    $('#click-query-icl').attr('autoplay', 'autoplay');
+  }
+});
+</script>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article {Peng2023.04.20.537598,
+	author = {Peng, Chao and Wang, Zelong and Zhao, Peize and Ge, Weifeng and Huang, Charles},
+	title = {AbFold -- an AlphaFold Based Transfer Learning Model for Accurate Antibody Structure Prediction},
+	elocation-id = {2023.04.20.537598},
+	year = {2023},
+	doi = {10.1101/2023.04.20.537598},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2023/04/21/2023.04.20.537598},
+	eprint = {https://www.biorxiv.org/content/early/2023/04/21/2023.04.20.537598.full.pdf},
+	journal = {bioRxiv}
+}</code></pre>
+  </div>
+</section>
+
+
+
+
+<style>
+.lits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.lits1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item img {
+    width: 100%;
+}
+.item {
+    width: 18%;
+
+}
+
+
+
+</style>
+
+<footer class="footer">
+  <div class="container">
+    <div class="lits">
+
+<div class="item">
+  <img src="skin/logo1.svg" alt="">
+</div>
+
+<div class="item">
+  <img src="skin/logo3.jpg" alt="">
+</div>
+<div class="item">
+  <img src="skin/logo4.png" alt="">
+</div>
+
+</div>
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/SII-TianleiYing/AbFold" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="skin/picture/88x31.png" />
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+    <div class="content">
+          <p>
+            This website adapted from the Nerfies templates, which is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a href="https://github.com/concept-fusion/concept-fusion.github.io">source code</a> of this website,
+            we just ask that you link back to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a> in the footer.
+            Please remember to remove the analytics code included in the header of the website which you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

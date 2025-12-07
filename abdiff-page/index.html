@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="ConceptFusion: Open-set Multimodal 3D Mapping">
-  <meta name="keywords" content="ConceptFusion, 3D Mapping, SLAM, Open-set, Multimodal, Foundation models, CLIP">
+        content="AbDiff: Generative Prediction of Antibody Conformational Ensembles Using Denoising Diffusion Probabilistic Models">
+  <meta name="keywords" content="AbDiff, DDPM, Conformational Ensembles, Denoising Diffusion Probabilistic Models, Antibody Structure Prediction, CDR H3 Loop, Full-atom Precision, Antibody Modeling">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ConceptFusion: Open-set Multimodal 3D Mapping</title>
+  <title>AbDiff: Generative Prediction of Antibody Conformational Ensembles Using Denoising Diffusion Probabilistic Models</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="skin/js/0cb72bf793124005bb7b16a61707859f.js"></script>
@@ -39,10 +39,127 @@
   <script src="skin/js/bulma-carousel.min.js"></script>
   <script src="skin/js/bulma-slider.min.js"></script>
   <script src="skin/js/index.js"></script>
-</head>
-<body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- Add some style -->
+  <style>
+  .has-fixed-navbar {
+    padding-top: 3.25rem; 
+  }
+  .navbar-elevated {
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+  }
+  .button.link-button-blue {
+    border-color: #2765cf;
+  }
+  .button.link-button-blue:hover,
+  .button.link-button-blue:focus {
+    border-color: #b5b5b5;
+  }
+  .other-research-list {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 0.85rem;
+  }
+  .other-research-item {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    transition: box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+  }
+  .other-research-title {
+    display: inline-block;
+    font-weight: 600;
+    color: #2765cf;
+    text-decoration: none;
+    margin-bottom: 0.15rem;
+    font-size: 1.15rem;
+    line-height: 1.3; 
+  }
+  .other-research-desc {
+    margin: 0;
+    color: #4a4a4a;
+    font-size: 0.95rem;
+  }
+  .other-research-item:hover {
+    border-color: #d0d7ff;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    transform: translateY(-1px);
+  }
+
+  .other-research-item:hover .other-research-title {
+    color: #1742a0;
+  }
+
+  .bibtex-block {
+    position: relative;
+  }
+
+  .bibtex-block pre {
+    margin: 0;
+  }
+
+  .bibtex-copy-button {
+    position: absolute;
+    top: 0.45rem;
+    right: 0.55rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    color: #888888;   
+  }
+
+  .bibtex-copy-button:hover {
+    color: #555555;
+  }
+
+  .bibtex-copy-button.copied {
+    color: #22c55e; 
+  }
+
+  .bibtex-copy-button .icon-copy {
+    display: inline-block;
+  }
+
+  .bibtex-copy-button .icon-check {
+    display: none;
+  }
+
+  .bibtex-copy-button.copied .icon-copy {
+    display: none;
+  }
+
+  .bibtex-copy-button.copied .icon-check {
+    display: inline-block;
+  }
+  .footer .content.has-text-centered {
+    margin-top: 1.5rem;
+  }
+
+  .img-hover-shadow {
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+  }
+
+  .img-hover-shadow:hover {
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+  }
+
+    .footer .pageview-counter {
+    margin-top: 1.5rem;
+  }
+
+  .footer .pageview-counter p {
+    margin-bottom: 0.25rem;
+  }
+</style>
+</head>
+<body class="has-fixed-navbar">
+
+<nav class="navbar is-fixed-top navbar-elevated" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -63,13 +180,13 @@
           Related Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://github.com/SII-TianleiYing/AbDiff">
+          <a class="navbar-item" href="https://sii-tianleiying.github.io/abdiff-page/">
             AbDiff
           </a>
-          <a class="navbar-item" href="https://github.com/SII-TianleiYing/AbFold">
+          <a class="navbar-item" href="https://sii-tianleiying.github.io/abfold-page/">
            AbFold
           </a>
-          <a class="navbar-item" href="https://github.com/SII-TianleiYing/iMano">
+          <a class="navbar-item" href="https://sii-tianleiying.github.io/imano-page/">
            iMano
           </a>
        
@@ -80,14 +197,17 @@
   </div>
 </nav>
 
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Generative Prediction of Antibody Conformational Ensembles Using Denoising Diffusion Probabilistic Models</h1>
-
+          <h1 class="title is-2 publication-title" style="color: #2765cf;">Generative Prediction of Antibody Conformational Ensembles Using Denoising Diffusion Probabilistic Models</h1>
+          <div style="text-align: center;">
+              <p class="content has-text-justified" style="color: #888888; display: inline-block; margin-bottom: 1em;">
+              This work is being submitted.
+              </p>
+          </div>
           <div class="is-size-6 publication-authors">
 
             <span class="author-block">
@@ -105,7 +225,7 @@
               Feng Yi<sup>2</sup>,</span>
 
                     <span class="author-block">
-              Wu Yanling<sup>2</sup><sup>*</sup>,</span>
+              Wu Yanling<sup>2</sup>,</span>
 
                     <span class="author-block">
               Ge Weifeng<sup>1</sup><sup>*</sup>,</span>
@@ -120,15 +240,15 @@
 
           <div class="is-size-7 publication-authors">
       
-            <span class="author-block"><sup>&#8224;</sup>1 College of Computer Science and Artificial Intelligence, Fudan University, Shanghai, China. 2 Key Laboratory of Medical Molecular Virology (MOE/NHC/CAMS), School of Basic Medical Sciences, Fudan University, Shanghai, China. # These authors contributed equally. * Corresponding author. </span>
+            <span class="author-block">1 College of Computer Science and Artificial Intelligence, Fudan University, Shanghai, China. 2 Key Laboratory of Medical Molecular Virology (MOE/NHC/CAMS), School of Basic Medical Sciences, Fudan University, Shanghai, China. # These authors contributed equally. * Corresponding author. </span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal " disabled="true">
+                <a href="#"
+                   class="external-link button is-normal link-button-blue" disabled="true">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
@@ -137,38 +257,30 @@
               </span>
 
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal ">
+                <a href="#"
+                   class="external-link button is-normal link-button-blue" disabled="true">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="ai ai-biorxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>BioRxiv</span>
                 </a>
               </span>
 
               <!-- Video Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal ">
+                <a href="#"
+                   class="external-link button is-normal link-button-blue" disabled="true">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
               </span>
-               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal ">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Tutorial Video</span>
-                </a>
-              </span>
+
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal ">
+                <a href="https://github.com/SII-TianleiYing/AbDiff"
+                   class="external-link button is-normal link-button-blue">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
@@ -178,7 +290,7 @@
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="#"
-                   class="external-link button is-normal" disabled="true">
+                   class="external-link button is-normal link-button-blue" disabled="true">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
@@ -197,7 +309,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
-         <img source src="skin/abdiff.gif" /> 
+         <img source src="skin/picture/abdiff.gif" /> 
     
       <!-- </video> -->
       <h2 class="subtitle has-text-centered">
@@ -244,10 +356,10 @@ capable of sampling antibody variable region ensembles with all-atom precision. 
         <!-- <h3 class="title is-4">Construct pixel-aligned features</h3> -->
         <div class="content has-text-justified">
          
-          <img src="skin/b2.jpg" />
-           <p>
-First, the encoder extracts pairwise structural features and sequence embeddings from the input antibody sequence, followed by the addition of Gaussian noise to the pairwise features. The diffusion model then predicts the noise at each step, conditioned on the sequence embeddings and diffusion timestep, and incrementally denoises the pairwise features. Throughout the denoising process, pairwise features unrelated to the H3 loop are replaced with their original values to anchor the framework. After the final denoising step, the decoder reconstructs fullatom antibody structures from the refined features, producing conformational ensembles focused on CDR-H3 variability.           </p>
+          <img src="skin/picture/b2.jpg" class="img-hover-shadow" />
         </div>
+           <p>
+First, the encoder extracts pairwise structural features and sequence embeddings from the input antibody sequence, followed by the addition of Gaussian noise to the pairwise features. The diffusion model then predicts the noise at each step, conditioned on the sequence embeddings and diffusion timestep, and incrementally denoises the pairwise features. Throughout the denoising process, pairwise features unrelated to the H3 loop are replaced with their original values to anchor the framework. After the final denoising step, the decoder reconstructs fullatom antibody structures from the refined features, producing conformational ensembles focused on CDR-H3 variability.</p>
         <br/>
       </div>
     </div>
@@ -260,7 +372,7 @@ First, the encoder extracts pairwise structural features and sequence embeddings
         <div class="content">
           <h2 class="title is-3">Achieve Full-Atomic Precision Prediction of Antibody Conformational Ensembles</h2>
           <div class="interpolation-image-wrapper-zero-shot">
-            <img src="skin/b3.png" />
+            <img src="skin/picture/b3.png" class="img-hover-shadow" />
           </div>
           <p>
 AbDiff is particularly well-suited for predicting antibody ensembles characterized by high conformational diversity. It’s an end-to-end predictive framework capable of directly generating full-atom Fv (VH+VL) conformational ensembles from antibody sequences.          </p>
@@ -274,7 +386,7 @@ AbDiff is particularly well-suited for predicting antibody ensembles characteriz
         <div class="columns is-centered">
           <div class="column content">
             <div class="interpolation-image-wrapper-fine-grained">
-              <img src="skin/b5.jpg" />
+              <img src="skin/picture/b5.jpg" class="img-hover-shadow" />
             </div>
             <p>
 Systematic evaluation on an independent test set demonstrated that the latent diffusion–based fixed-backbone strategy achieves a favorable balance among geometric validity, conformational diversity, and accuracy relative to experimentally determined structures. Compared with several representative IDP generative methods, AbDiff outperformed in key metrics including Val-Clash, Val-Bond, TM-Score, and RMSD.             </p>
@@ -293,7 +405,7 @@ Systematic evaluation on an independent test set demonstrated that the latent di
         <div class="content">
           <h2 class="title is-3">Guarantee framework region accuracy through latent space diffusion and masking mechanism</h2>
           <div class="interpolation-image-wrapper-uncoco">
-            <img src="skin/b4.jpg" />
+            <img src="skin/picture/b4.jpg" class="img-hover-shadow" />
           </div>
           <p>
 First, AbDiff obtains the antibody backbone structure—representing the relatively stable regions—using an established structural prediction model, and then to generate diverse CDR-H3 conformations while keeping this backbone fixed. This reframes the antibody conformation generation problem as: given an antibody sequence and its backbone structure, generate the conformation of the complementarity-determining region H3.          </p>
@@ -306,14 +418,15 @@ First, AbDiff obtains the antibody backbone structure—representing the relativ
         <h2 class="title is-3">Capture diverse conformations of the same antibody</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <img src="skin/b6.gif" />
-         
-            <p>
-We performed 100 independent diffusion sampling runs with AbDiff for 7N08 to generate a high-diversity predicted conformational ensemble. Concurrently, a reference ensemble was assembled from the Protein Data Bank (PDB), comprising one unbound structure and three antigen-bound structures. In terms of structural accuracy, AbDiff maintained prediction errors below 1 Å for the unbound state and the bound states, demonstrating superior capability to preserve both high precision and structural consistency in multi-stable systems.
-            </p>
-          </div>
-
+            <img src="skin/picture/b6.gif" class="img-hover-shadow" />
+          </div>     
         </div>
+
+        <p> 
+          We performed 100 independent diffusion sampling runs with AbDiff for 7N08 to generate a high-diversity predicted conformational ensemble. Concurrently, a reference ensemble was assembled from the Protein Data Bank (PDB), comprising one unbound structure and three antigen-bound structures. In terms of structural accuracy, AbDiff maintained prediction errors below 1 Å for the unbound state and the bound states, demonstrating superior capability to preserve both high precision and structural consistency in multi-stable systems.
+        </p>
+
+
       </div>
     </div>
     <!--/ 3D spatial reasoning -->
@@ -325,30 +438,32 @@ We performed 100 independent diffusion sampling runs with AbDiff for 7N08 to gen
   </div>
 </section>
 
-
-
-
-
-
 <section class="section" id="concurrent work">
   <div class="container is-max-desktop content">
-    <!-- Concurrent Work. -->
+    <!-- Our Other Research. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Our Other Research</h2>
 
-        <div class="content has-text-justified">
-       
-          <p>
-            <a href="https://github.com/SII-TianleiYing/AbFold">AbFold</a> 
-            All-atom precision antibody structure predictor combining linguistic features and sequence features
-            
-          </p>
-           <p>
-            <a href="https://github.com/SII-TianleiYing/iMano">iMano</a> 
-           Artificial intelligence empowers various types of antibody human sources
-            
-          </p>
+        <div class="other-research-list">
+          <div class="other-research-item">
+            <a class="other-research-title" href="https://sii-tianleiying.github.io/abfold-page/">
+              AbFold
+            </a>
+            <p class="other-research-desc">
+              All-atom precision antibody structure predictor combining linguistic features and sequence features.
+            </p>
+          </div>
+
+          <div class="other-research-item">
+            <a class="other-research-title" href="https://sii-tianleiying.github.io/imano-page/">
+              iMano
+            </a>
+            <p class="other-research-desc">
+              Artificial intelligence empowers various types of antibody human sources.
+            </p>
+          </div>
+        </div>
      
         </div>
       </div>
@@ -378,12 +493,28 @@ We performed 100 independent diffusion sampling runs with AbDiff for 7N08 to gen
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{AbDiff,
- author = {作者名或组织名},
+
+    <div class="bibtex-block">
+    <button
+      class="bibtex-copy-button"
+      type="button"
+      aria-label="Copy BibTeX"
+    >
+      <span class="icon-copy">
+        <i class="fas fa-copy"></i>
+      </span>
+      <span class="icon-check">
+        <i class="fas fa-check"></i>
+      </span>
+    </button>
+
+      <pre><code id="bibtex-code">@misc{AbDiff,
+ author = {Authors},
  title = {AbDiff},
  year = {2025},
- url = {https://github.com/username/repository_name},
+ url = {https://github.com/SII-TianleiYing/AbDiff},
 }</code></pre>
+    </div>
   </div>
 </section>
 
@@ -413,8 +544,6 @@ We performed 100 independent diffusion sampling runs with AbDiff for 7N08 to gen
 
 }
 
-
-
 </style>
 
 <footer class="footer">
@@ -422,22 +551,28 @@ We performed 100 independent diffusion sampling runs with AbDiff for 7N08 to gen
     <div class="lits">
 
 <div class="item">
-  <img src="skin/logo1.svg" alt="">
+  <a href="https://www.fudan.edu.cn" target="_blank" rel="noopener">
+    <img src="skin/logo/fudan.svg" alt="">
+  </a>
 </div>
 <div class="item">
-  <img src="skin/logo2.png" alt="">
+  <a href="https://basicmed.fudan.edu.cn" target="_blank" rel="noopener">
+    <img src="skin/logo/basicmed.png" alt="">
+  </a>
 </div>
 <div class="item">
-  <img src="skin/logo3.jpg" alt="">
+  <a href="https://ai.fudan.edu.cn/main.htm" target="_blank" rel="noopener">
+    <img src="skin/logo/csai.png" alt="">
+  </a>
 </div>
 <div class="item">
-  <img src="skin/logo4.png" alt="">
+  <img src="skin/logo/csi.png" alt="">
 </div>
 
 </div>
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="">
+         href="#">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://github.com/SII-TianleiYing/AbDiff" class="external-link" disabled>
@@ -450,19 +585,97 @@ We performed 100 independent diffusion sampling runs with AbDiff for 7N08 to gen
     <div class="columns is-centered">
       <div class="column is-8">
        <div class="content">
-          <p>
-            This website adapted from the Nerfies templates, which is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a href="https://github.com/concept-fusion/concept-fusion.github.io">source code</a> of this website,
-            we just ask that you link back to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a> in the footer.
-            Please remember to remove the analytics code included in the header of the website which you do not want on your website.
-          </p>
+        <p>
+          This website is licensed under a
+          <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+            Creative Commons Attribution-ShareAlike 4.0 International License
+          </a>.
+        </p>
+
+        <p>
+          The project page template is adapted from the
+          <a href="https://github.com/concept-fusion/concept-fusion.github.io">ConceptFusion repository</a>
+          and the
+          <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>.
+        </p>
+        <p>
+          This means you are free to borrow the
+          <a href="https://github.com/SII-TianleiYing/SII-TianleiYing.github.io/tree/989f0e56ab877fbd83831dbd2e6875bc0db5061d/abdiff-page">
+            source code
+          </a>
+          of this website, we just ask that you link back to the
+          <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a>
+          in the footer.  
+          Please remember to remove the analytics code included in the header of the website if you do not want it on your website.
+        </p>
         </div>
       </div>
     </div>
+    
+    <div class="content has-text-centered pageview-counter">
+      <p>
+        Total pageviews:
+        <span id="finicount_views" style="padding-left: 4px;">--</span>
+      </p>
+      <p class="is-size-7">
+        Pageview counter powered by
+        <a href="https://github.com/finisky/finicounter/tree/master" target="_blank" rel="noopener">
+          FiniCounter
+        </a>
+        (counts total hits, not unique visitors).
+      </p>
+    </div>
+
   </div>
 </footer>
 
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var copyBtn = document.querySelector('.bibtex-copy-button');
+    var codeEl  = document.getElementById('bibtex-code');
+
+    if (!copyBtn || !codeEl) return;
+
+    copyBtn.addEventListener('click', function () {
+      var text = codeEl.innerText || codeEl.textContent;
+
+      function onSuccess() {
+        copyBtn.classList.add('copied');
+        setTimeout(function () {
+          copyBtn.classList.remove('copied');
+        }, 1200);
+      }
+
+      function onFail() {
+        console.warn('Copy BibTeX failed');
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text)
+          .then(onSuccess)
+          .catch(onFail);
+      } else {
+        var range = document.createRange();
+        range.selectNodeContents(codeEl);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        try {
+          var ok = document.execCommand('copy');
+          ok ? onSuccess() : onFail();
+        } catch (e) {
+          onFail();
+        }
+        selection.removeAllRanges();
+      }
+    });
+  });
+</script>
+
+<!--counter-->
+<script async src="//finicounter.eu.org/finicounter.js"></script>
+
+
 </html>

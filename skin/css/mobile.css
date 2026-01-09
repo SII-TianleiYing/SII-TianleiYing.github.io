@@ -1,0 +1,151 @@
+@charset "utf-8";
+@media screen and (max-width: 980px) {
+	
+.head_menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: #0071c1;
+}
+.menu_orther {
+    display: flex;
+    align-items: center;
+}
+.container_pub{
+	width: 95%;
+}
+.headmenu {
+    display: block;
+    width: 0.6rem;
+    height: 0.01rem;
+    background: #ffffff;
+    margin-top: .2rem;
+    transition: 0.4s all ease;
+    margin-left: 0.3rem;
+}
+
+.headmenu.menu1 {
+    margin-top: 0;
+}
+.m_menu.active span.headmenu.menu2 {
+    transform: rotate(-45deg);
+    margin-top: 0;
+}
+
+.m_menu.active span.headmenu.menu3 {opacity: 0;margin-top: 0;}
+
+.m_menu.active .headmenu.menu1 {
+    transform: rotateZ(45deg);
+}
+.button_style1 {
+    font-size: .28rem;
+    line-height: 1.5;
+}
+.head_menu li a {
+    color: #fff;
+    font-size: .28rem;
+    display: block;
+    padding: 0.3rem .5rem;
+    border-top: 0.01rem solid #ffffff;
+}
+
+.head_menu li.active a {
+    color: #fff;
+    background: #DC9016;
+}
+.head_menu li:first-child a {
+    border-top: none;
+}
+.item_a {
+    width: 47%;
+}
+.pelle_left {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.pelle_ri {
+    width: 100%;
+}
+
+.pelle_flex {
+    flex-wrap: wrap;
+}
+
+.mem_pos {
+    position: static;
+    transform: none;
+}
+
+.tx {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+}
+
+.members_im {
+    display: none;
+}
+
+.item_bt {
+    font-size: .34rem;
+}
+
+.item_bt2 {
+    font-size: .3rem;
+}
+.about_nr_left {
+    width: 100%;
+}
+
+.about_nr_ri {
+    width: 100%;
+}
+
+.about_nr {
+    flex-wrap: wrap;
+}
+
+.about_nr_lefttext {
+    font-size: .3rem;
+    line-height: 1.5;
+}
+
+.about_nr_leftbt.ac {
+    font-size: .5rem;
+}
+.about_a_con {
+    font-size: .3rem;
+    line-height: 1.5;
+}
+.about_a_b_ba p {
+    font-size: .3rem;
+}
+.tr {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    height: 30px;
+}
+.by1 {
+    font-size: .20px;
+    font-weight: 600;
+    text-align: center;
+}
+.pelle_ri4 {
+    font-size: .20px;
+    text-align: center;
+}
+
+.pelle_ri2 {
+    font-size: .3rem;
+}
+
+.pelle_ri1 {
+    font-size: .4rem;
+}
+}

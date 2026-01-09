@@ -1,170 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CSI Models</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Project pages for AbDiff, AbFold, and iMano.">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: #f5f5f5;
-      color: #111827;
-    }
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2.5rem 1.5rem;
-    }
-    .container {
-      width: 100%;
-      max-width: 960px;
-    }
-    .header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .title {
-      font-size: 1.9rem;
-      margin: 0 0 0.4rem;
-      color: #111827;
-    }
-    .subtitle {
-      margin: 0;
-      font-size: 0.95rem;
-      color: #6b7280;
-    }
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="skin/css/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="skin/css/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="skin/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="skin/css/mobile.css"/>
+				<link rel="stylesheet" type="text/css" href="skin/css/swiper-bundle.min.css"/>
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
+		<script src="skin/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="skin/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="skin/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="skin/js/jquery.countup.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="skin/js/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="header_height"></div>
+		<div class="header">
+			<div class="container_pub">
+				<div class="head_flex">
+					<div class="head_logo">
+					  <a href="index.html"><img src="skin/images/logo.png" alt="" /></a>
+					</div>
+					<ul class="head_menu">
+						<!-- <li class="active"><a href="">网站首页</a></li> -->
+						<li ><a href="Models.html">Models</a></li>
+						<li><a href="">  DataBases </a></li>
+						<li><a href="Publications.html">Publications</a></li>
+						<li><a href="People.html">People</a></li>
+						<li><a href="about.html">About</a></li>
+					
+					</ul>
+					<div class="menu_orther">
+						
+						<!-- <a href="" class="button_style1 button_hover2 ">我要下单</a> -->
+						<div class="m_menu">
+							<span class="headmenu menu1"></span>
+							<span class="headmenu menu2"></span>
+							<span class="headmenu menu3"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="index_banner">
+			 <div class="swiper mySwiper">
 
-    .project-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      background-color: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
-      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-    }
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+		
+		<img src="skin/images/a.png" alt="">
+	
+		<div class="tr">
+				<div class="by2"> 
+Ten years. Billions of dollars. Less than a l0% chance of success.
+		</div>
+		<div class="by1"> 
+We build AI to address this challenge.
+		</div>
+		</div>
+	</div>
+ <div class="swiper-slide"><img src="skin/images/a.png" alt="">
+<div class="tr">
+				<div class="by2"> 
+Ten years. Billions of dollars. Less than a l0% chance of success.
+		</div>
+		<div class="by1"> 
+We build AI to address this challenge.
+		</div>
+		</div>
+</div>
 
-    .project-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
-      border-color: #d0d7ff;
-    }
+  <div class="swiper-slide"><img src="skin/images/a.png" alt="">
 
-    .project-thumb {
-      width: 100%;
-      height: 140px;
-      background-color: #e5e7eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      color: #6b7280;
-    }
-    .project-thumb img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+<div class="tr">
+				<div class="by2"> 
+Ten years. Billions of dollars. Less than a l0% chance of success.
+		</div>
+		<div class="by1"> 
+We build AI to address this challenge.
+		</div>
+		</div>
+</div>
 
-    .project-body {
-      padding: 1rem 1.1rem 1.1rem;
-    }
-    .project-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 0 0 0.3rem;
-      color: #1f2937;
-    }
-    .project-desc {
-      margin: 0;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    .footer-text {
-      margin-top: 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #9ca3af;
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <div class="container">
-      <header class="header">
-        <h1 class="title">Antibody Modeling Projects</h1>
-        <p class="subtitle">
-          AbDiff · AbFold · iMano
-        </p>
-      </header>
-
-      <main class="projects">
-        <!-- AbDiff card -->
-        <a class="project-card" href="abdiff-page/">
-          <div class="project-thumb">
-            <img src="abdiff-page/skin/picture/b2.jpg" alt="AbDiff">
-          </div>
-          <div class="project-body">
-            <h2 class="project-title">AbDiff</h2>
-            <p class="project-desc">
-              Generative prediction of antibody conformational ensembles using diffusion models.
-            </p>
-          </div>
-        </a>
-
-        <!-- AbFold card -->
-        <a class="project-card" href="abfold-page/">
-          <div class="project-thumb">
-            <img src="abfold-page/skin/picture/a1.png" alt="AbFold">
-          </div>
-          <div class="project-body">
-            <h2 class="project-title">AbFold</h2>
-            <p class="project-desc">
-              All-atom precision antibody structure prediction integrating sequence and language features.
-            </p>
-          </div>
-        </a>
-
-        <!-- iMano card -->
-        <a class="project-card" href="imano-page/">
-          <div class="project-thumb">
-            <img src="imano-page/iMano 1a.png" alt="iMano">
-          </div>
-          <div class="project-body">
-            <h2 class="project-title">iMano</h2>
-            <p class="project-desc">
-              AI-powered modeling of diverse antibody human sources and repertoires.
-            </p>
-          </div>
-        </a>
-      </main>
-
-      <p class="footer-text">
-        © <span id="year"></span> CSI Models
-      </p>
+   
     </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+	
+	<div class="swiper-pagination"></div>
   </div>
+			<div class="container_pub">
+				<div class="bt_pub">
+					Models
+				</div>
 
-  <script>
-    // 自动填当前年份（可有可无）
-    document.getElementById('year').textContent = new Date().getFullYear();
+				<div class="lbm"> 
+				
+				
+					<div class="swiper mySwiper1">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+		<div class="item">
+			<img src="skin/images/a1.jpg" alt="">
+			<div class="item_bt">
+AbDiff
+			</div>
+			<div class="item_bt2">
+Generative prediction of antibodyconformational ensembles using diffusion models.
+			</div>
+		</div>
+	  </div>
+	  <div class="swiper-slide">
+		<div class="item">
+			<img src="skin/images/a1.jpg" alt="">
+			<div class="item_bt">
+AbDiff
+			</div>
+			<div class="item_bt2">
+Generative prediction of antibodyconformational ensembles using diffusion models.
+			</div>
+		</div>
+	  </div>
+
+	  <div class="swiper-slide">
+		<div class="item">
+			<img src="skin/images/a1.jpg" alt="">
+			<div class="item_bt">
+AbDiff
+			</div>
+			<div class="item_bt2">
+Generative prediction of antibodyconformational ensembles using diffusion models.
+			</div>
+		</div>
+	  </div>
+	   <div class="swiper-slide">
+		<div class="item">
+			<img src="skin/images/a1.jpg" alt="">
+			<div class="item_bt">
+AbDiff
+			</div>
+			<div class="item_bt2">
+Generative prediction of antibodyconformational ensembles using diffusion models.
+			</div>
+		</div>
+	  </div>
+	   <div class="swiper-slide">
+		<div class="item">
+			<img src="skin/images/a1.jpg" alt="">
+			<div class="item_bt">
+AbDiff
+			</div>
+			<div class="item_bt2">
+Generative prediction of antibodyconformational ensembles using diffusion models.
+			</div>
+		</div>
+	  </div>
+
+<div class="swiper-slide">
+		<div class="item">
+			<img src="skin/images/a1.jpg" alt="">
+			<div class="item_bt">
+AbDiff
+			</div>
+			<div class="item_bt2">
+Generative prediction of antibodyconformational ensembles using diffusion models.
+			</div>
+		</div>
+	  </div>
+
+
+ 
+    </div>
+
+
+  </div>
+  
+  <!-- 将按钮放在容器外部 -->
+<div class="custom-swiper-button-next"></div>
+<div class="custom-swiper-button-prev"></div>
+  
+				</div>
+			<div class="external-controls">
+  <!-- 分页器放在这里 -->
+  <div class="external-pagination"></div>
+</div>
+			</div>
+		</div>
+		<div class="about">
+			<div class="container_pub">
+				<div class="about_nr">
+					<div class="about_nr_left">
+						<div class="about_nr_leftbt">
+							About Us
+						</div>
+						<div class="about_nr_lefttext">
+							<p>Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.
+</p>
+<br>
+<p>
+	Repudiandae rerum velit modi et officia quasi facilis
+Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.
+</p>
+<br>
+<p>Incidunt non veritatis illum ea ut nisi
+Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.
+						</div></p>
+
+					</div>
+					<div class="about_nr_ri">
+						<img src="skin/images/b2.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+<style type="text/css" media="all">
+    .custom-swiper-button-next,
+.custom-swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.custom-swiper-button-next:hover,
+.custom-swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.custom-swiper-button-next {
+  right: 0;
+}
+
+.custom-swiper-button-prev {
+  left: 0;
+}
+.lbm {
+    position: relative;
+    padding: 0 30px;
+}
+/* 箭头图标 */
+.custom-swiper-button-next::after,
+.custom-swiper-button-prev::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(45deg);
+}
+
+.custom-swiper-button-prev::after {
+  transform: rotate(225deg);
+  margin-right: -4px;
+}
+
+.custom-swiper-button-next::after {
+  margin-left: -4px;
+}
+</style>
+		<div class="footer">
+			<div class="container_pub">
+				<div class="logo_list">
+					<div class="logo_item">
+						<img src="skin/images/logo1.svg" alt="">
+					</div>
+					<div class="logo_item">
+						<img src="skin/images/logo2.png" alt="">
+					</div>
+					<div class="logo_item">
+						<img src="skin/images/logo3.jpg" alt="">
+					</div>
+					<div class="logo_item">
+						<img src="skin/images/logo4.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="foot">
+				<p>Total pageviews:79</p>
+				<p>Pageview counter powered by FiniCounter (counts total hits, not unique visitors).</p>
+			</div>
+		</div>
+
+		<script src="skin/js/swiper-bundle.min.js"></script>
+		
+		
+		
+		 <script>
+    var swiper = new Swiper(".mySwiper", {
+		  autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+    },
+		 loop: true,
+		  navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
   </script>
-</body>
+<script>
+// 初始化 Swiper，使用外部元素作为分页器
+var swiper = new Swiper('.mySwiper1', {
+	  autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+    },
+		 loop: true,
+
+ breakpoints: {
+        // 当窗口宽度 >= 1200px
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 40
+        },
+        // 当窗口宽度 >= 768px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        },
+        // 当窗口宽度 >= 480px
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        // 当窗口宽度 < 480px
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        }
+    },
+  loop: true,
+    navigation: {
+    nextEl: '.custom-swiper-button-next',
+    prevEl: '.custom-swiper-button-prev',
+  },
+  
+  // 关键：将分页器指向外部元素
+  pagination: {
+    el: '.external-pagination',  // 指向外部元素
+    clickable: true,
+    bulletClass: 'swiper-pagination-bullet',  // 保持原有的类名
+    bulletActiveClass: 'swiper-pagination-bullet-active'  // 保持激活类名
+  }
+});
+</script>
+<script src="skin/js/common.js"></script>
+
+	</body>
 </html>

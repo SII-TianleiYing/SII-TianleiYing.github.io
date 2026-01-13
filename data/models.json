@@ -1,0 +1,82 @@
+[
+  {
+    "id": "2024-abdiff",
+    "type": "A",
+    "name": "AbDiff",
+    "abstract": "Generative prediction of antibody conformational ensembles using diffusion models.",
+    "links": "https://sii-tianleiying.github.io/abdiff-page/",
+    "graphical_abstract": "skin/images/models/abdiff.jpg"
+  },
+  {
+    "id": "2025-abdock",
+    "type": "A",
+    "name": "AbDock",
+    "abstract": "Structure-aware antibody docking and complex refinement with uncertainty estimation.",
+    "links": "https://example.com/abdock",
+    "graphical_abstract": "skin/images/models/abdock.png"
+  },
+  {
+    "id": "2025-abdesign",
+    "type": "A",
+    "name": "AbDesign",
+    "abstract": "Controllable antibody sequence design conditioned on epitope geometry and developability priors.",
+    "links": "https://example.com/abdesign",
+    "graphical_abstract": "skin/images/models/abdesign.jpg"
+  },
+  {
+    "id": "2024-abfit",
+    "type": "A",
+    "name": "AbFit",
+    "abstract": "Fast antibody structure prediction and loop flexibility scoring for engineering workflows.",
+    "links": "https://example.com/abfit",
+    "graphical_abstract": "skin/images/models/abfit.webp"
+  },
+  {
+    "id": "2025-paratope",
+    "type": "A",
+    "name": "ParatopeScope",
+    "abstract": "Paratope identification and interface hotspot mapping for antibody–antigen recognition.",
+    "links": "https://example.com/paratopescope",
+    "graphical_abstract": "skin/images/models/paratopescope.png"
+  },
+  {
+    "id": "2024-immumap",
+    "type": "I",
+    "name": "ImmuMap",
+    "abstract": "Immune repertoire embedding and visualization for tracking clonal dynamics across conditions.",
+    "links": "https://example.com/immumap",
+    "graphical_abstract": "skin/images/models/immumap.jpg"
+  },
+  {
+    "id": "2025-tcrdiff",
+    "type": "I",
+    "name": "TCRDiff",
+    "abstract": "Diffusion-based modeling of TCR conformational landscapes and peptide–MHC recognition.",
+    "links": "https://example.com/tcrdiff",
+    "graphical_abstract": "skin/images/models/tcrdiff.png"
+  },
+  {
+    "id": "2025-immugen",
+    "type": "I",
+    "name": "ImmuGen",
+    "abstract": "Generative design of immunogenic peptides with tunable HLA binding and safety constraints.",
+    "links": "https://example.com/immugen",
+    "graphical_abstract": "skin/images/models/immugen.jpg"
+  },
+  {
+    "id": "2024-cytosim",
+    "type": "I",
+    "name": "CytoSim",
+    "abstract": "Cytokine signaling simulation and intervention ranking with mechanistic + learned models.",
+    "links": "https://example.com/cytosim",
+    "graphical_abstract": "skin/images/models/cytosim.png"
+  },
+  {
+    "id": "2025-vaxrank",
+    "type": "I",
+    "name": "VaxRank",
+    "abstract": "Vaccine candidate prioritization from antigen features, epitope coverage, and immune risk scores.",
+    "links": "https://example.com/vaxrank",
+    "graphical_abstract": "skin/images/models/vaxrank.jpg"
+  }
+]

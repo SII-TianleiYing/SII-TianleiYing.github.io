@@ -1,0 +1,196 @@
+[
+  {
+    "id": "wuyanling",
+    "name": "Yanliang Wu",
+    "role": "Research Fellow",
+    "title": "",
+    "avatar": "skin/images/people/wuyanling.jpg",
+    "major": "",
+    "intro": "Dr. Wu is a Research Fellow with long-standing expertise in antiviral-immunological intervention strategies. She has established a distinctive theoretical-and-technical-framework for the modular functionalisation of next-generation antibodies, enabling the innovative synthesis of novel antibody architectures, including fully-human single-domain antibodies. These engineered antibodies exhibit precise targeting of cryptic epitopes, broad-spectrum antiviral activity, and favourable properties for aerosolised inhalation delivery.\n\nHer representative work includes more than 30 SCI-indexed publications as corresponding or first author in leading journals such as Cell, Cell Host & Microbe, and Nature Communications, with over 4,000 total citations. She has served as principal investigator for seven competitive research projects, including grants from the National-Key Research-and-Development Program of China and the National Natural Science Foundation of China (General and Young Scientist Programs).\n\nShe holds 16 domestic and international invention patent applications, six of which have been granted. She has successfully completed two major technology transfer projects, obtained three clinical trial approvals, and advanced one innovative biologic drug candidate through Phase-I clinical trials. Her achievements have been recognised with several prestigious honours, including the First Prize of the Ministry of Education Award for Outstanding Scientific Research Achievements, Shanghai Oriental Talent (Youth) Program, and Shanghai Chenguang Scholar Award.",
+    "links": {
+      "email": "wuyanling@fudan.edu.cn",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "kongyu",
+    "name": "Yu Kong",
+    "role": "Assistant Research Fellow",
+    "title": "",
+    "avatar": "skin/images/people/kongyu.png",
+    "major": "",
+    "intro": "Yu Kong is dedicated to structure-guided antibody engineering, with a research focus on elucidating the structural determinants that shape antibody function. His work centers on the optimization and clinical translation of single-domain antibodies. He has contributed significantly to the development of next-generation fully human single-domain antibody–drug conjugates by resolving high-resolution complex structures between these antibodies and solid-tumor antigens. These structural insights reveal the mechanisms underlying high-affinity molecular recognition and provide a foundation for improving therapeutic selectivity.\n\nDr. Kong also played a key role in advancing the TFDesign-sdAb computational platform, where he led the experimental validation efforts. He established reliable expression and purification strategies for AI-designed human and camelid single-domain antibody variants, addressing long-standing challenges associated with producing natural single-domain antibodies at scale.\n\nWithin the team, he coordinates the experimental validation pipeline, integrating candidate screening, protein production, multidimensional functional assessments, and structural characterization into a unified design–test–analysis cycle. His work forms an essential bridge between AI-driven molecular design, experimental verification, and translational development, accelerating the path from computational modeling to therapeutic application.",
+    "links": {
+      "email": "kongyu@fudan.edu.cn",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "zhuruohan",
+    "name": "Ruohan Zhu",
+    "role": "Researcher (Ph.D.)",
+    "title": "",
+    "avatar": "skin/images/people/zhuruohan.png",
+    "major": "",
+    "intro": "Dr. Ruohan Zhu is a Ph.D. researcher specializing in computational simulation and de novo protein design, with a focus on applying advanced AI technologies to the development of novel antibody therapeutics. Her research addresses key challenges in the molecular design process for antibodies, bridging computational predictions with experimental validation.\n\nDr. Zhu possesses extensive expertise in computer-aided protein engineering and optimization, with multiple successful cases translating computational methods into practical applications.\n\nWithin her team, Dr. Zhu has played a pivotal role in constructing and maintaining the AIDD computational platform. Notably, she contributed to the development of iMano, a high-precision and broadly applicable computational method for antibody humanization, which substantially improves the efficiency and reliability of AI-driven antibody engineering.\n\nLooking forward, Dr. Zhu will continue to advance AI-based antibody design methodologies and establish scalable computational workflows that can be effectively deployed in pharmaceutical R&D. Her work aims to accelerate the translation of computational predictions into actionable therapeutic candidates.",
+    "links": {
+      "email": "zhuruohan@forlongbiotech.com",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "wangmingkai",
+    "name": "Mingkai Wang",
+    "role": "Researcher (Ph.D.)",
+    "title": "",
+    "avatar": "skin/images/people/wangmingkai.png",
+    "major": "",
+    "intro": "Dr. Wang earned his Ph.D. from the Department of Pathogen Biology, School of Basic Medical Sciences, Fudan University. His primary research focuses on the development of artificially synthesized novel-structured antibodies, as well as the design and screening of innovative antibody-based therapeutics. During his doctoral studies, he (co-)authored multiple research articles published in leading international academic journals, including Nature Communicationsand Acta Pharmaceutica Sinica B (APSB).\n\nDr. Wang independently developed a novel IgG-format bispecific antibody platform based on a light-chain single-domain antibody (VHHL). This innovative platform overcomes key technical challenges of conventional bispecific antibodies, such as structural complexity, low expression yields, and poor molecular homogeneity. His work provides a more stable and efficient solution for multi-target synergistic therapies. The related research findings were featured as a cover article in Antibody Therapeutics.",
+    "links": {
+      "email": "mkwang@forlongbiotech.com",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "liulitong",
+    "name": "Liu Litong",
+    "role": "Ph.D. Candidate",
+    "title": "",
+    "avatar": "skin/images/people/liulitong.png",
+    "major": "",
+    "intro": "Liu Litong is a Ph.D. candidate at Fudan University, dedicated to the field of AI-Immune Medicine. Her research focuses on antibody engineering and the systematic experimental validation of AI-designed therapeutics.\n\nShe played a pivotal role in establishing the team’s high-throughput platform for antibody expression, purification, and affinity profiling. By optimizing these reliable biochemical strategies, she has significantly accelerated the screening and verification process for large-scale AI-generated candidates.\n\nWithin the team, Liu Litong contributes to multiple key projects by coordinating multidimensional functional assessments. Her work spans the entire validation pipeline, ranging from protein preparation to in vivo animal studies. This comprehensive experimental feedback provides the essential \"ground-truth\" data needed to refine the team's computational models, bridging the gap between AI design and therapeutic application.",
+    "links": {
+      "email": "lltong95@163.com",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+  
+  {
+    "id": "lvbohao",
+    "name": "Bohao Lv",
+    "role": "Ph.D. Candidate",
+    "title": "",
+    "avatar": "skin/images/people/lvbohao.png",
+    "major": "",
+    "intro": "Bohao Lv’s previous research has focused on medical imaging and the post-training of Large Language Models (LLMs). His work included the unification of multimodal medical image segmentation, the prediction of lesion progression, and the development of post-training methodologies for domain-specific models.\n\nCurrently, he is dedicated to empowering the biopharmaceutical field with AI, with a focus on human antibody design and peptide drug design. His primary work involves optimizing structure prediction models like AlphaFold 3 (AF3) and designing molecular drugs for specific targets/antigens.\n\nWithin his team, he is responsible for leveraging AI methods to solve existing scientific challenges in the pharmaceutical domain, helping domain experts accelerate their research on critical problems.",
+    "links": {
+      "email": "#",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "maxiaojie",
+    "name": "Maxiao Jie",
+    "role": "Ph.D. Student",
+    "title": "",
+    "avatar": "skin/images/people/maxiaojie.png",
+    "major": "",
+    "intro": "Xiaojie Ma is a Ph.D. student focusing on antibody engineering, with a research emphasis on antibody screening platforms and the development of novel synthetic immunological molecules. Her work centers on the discovery, engineering, and functional characterization of antibodies using high-throughput experimental approaches.\n\nShe has extensive experimental expertise in yeast display and phage display technologies, as well as protein expression, purification, and activity validation. These skills enable systematic screening and optimization of antibody candidates across diverse libraries and functional readouts.\n\nIn addition to wet-lab research, she actively participates in the experimental validation of AI-driven antibody design and optimization workflows. Her contributions include validating antibody humanization strategies based on the iMano model, as well as AI-based antibody affinity prediction model. Through the realization of a wet–dry closed-loop workflow, her research is aiming to improve the efficiency and reliability of AI-driven antibody design pipelines.",
+    "links": {
+      "email": "xjma22@m.fudan.edu.cn",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "fengyi",
+    "name": "Yi Feng",
+    "role": "Ph.D. Student",
+    "title": "",
+    "avatar": "skin/images/people/fengyi.png",
+    "major": "",
+    "intro": "Feng Yi is a Ph.D. student focusing on AI-driven antibody design. Her research centers on translating biologics large models into practical workflows for antibody generation and optimization, thereby accelerating the development of therapeutic antibodies.\n\nShe contributes to the development and implementation of models for antibody design, immunogenicity prediction, and antigen–antibody interaction analysis, and plays a key role in advancing the iMano platform by proposing improved strategies for various antibody humanization scenarios.\n\nHer work spans model evaluation, data curation, algorithm refinement, and the collaborative development of specialized tools, aiming to builds an efficient and scalable AI-enabled design–test–optimization pipeline for next-generation antibody therapeutics.",
+    "links": {
+      "email": "yfeng21@m.fudan.edu.cn",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "qianjuncheng",
+    "name": "Jun Cheng Qian",
+    "role": "Ph.D. Student",
+    "title": "",
+    "avatar": "skin/images/people/qianjuncheng.png",
+    "major": "",
+    "intro": "Juncheng Qian is a Ph.D. student whose research focuses on antibody engineering and AI-driven antibody developability assessment. In this project, he is primarily responsible for the construction and curation of immune-related datasets, as well as the development of predictive models for single-domain antibody solubility. His work integrates experimental expression data with sequence- and representation-based modeling to address key developability challenges of fully human single-domain antibodies.\n\nHe has contributed to the design and validation of antibody-specific machine learning frameworks, with particular emphasis on improving model robustness under small-sample and noisy experimental conditions. By bridging experimental data generation, feature analysis, and model development, his research supports the systematic",
+    "links": {
+      "email": "25111010056@m.fudan.edu.cn",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "shishaojiSe",
+    "name": "Shaojie Shi",
+    "role": "Ph.D. Student",
+    "title": "",
+    "avatar": "skin/images/people/shishaojie.png",
+    "major": "",
+    "intro": "Shaojie Shi is a PhD student at the Artificial Intelligence Innovation and Incubation Institute of Fudan University. His previous research primarily focused on training and instruction fine-tuning of large language models. He is currently working on optimizing LLM-based multi-agent systems and exploring their applications in accelerating scientific research. Within the team, he is responsible for processing the OAS dataset and evaluating antibody generation models.",
+    "links": {
+      "email": "#",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "chenlingzhi",
+    "name": "Lingzhi Chen",
+    "role": "Ph.D. Student",
+    "title": "",
+    "avatar": "",
+    "major": "",
+    "intro": "Lingzhi Chen is a first-year direct-entry PhD student whose research focuses on the intersection of AI for Drug Discovery and Design (AIDD) and geometric deep learning. His work leverages antibody and protein design pipelines to model target binding and optimise molecular structures. In parallel, he explores E(3)- and O(3)-equivariant neural networks for modelling tensorial properties in macromolecular and materials systems. By systematically incorporating structural symmetry and physical priors into learning frameworks, he aims to improve both predictive accuracy and interpretability in complex biological and material systems.",
+    "links": {
+      "email": "#",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "qinchuang",
+    "name": "Chuang Qin",
+    "role": "Undergraduate Student",
+    "title": "",
+    "avatar": "skin/images/people/qinchuang.png",
+    "major": "",
+    "intro": "Qin Chuang focuses primarily on the design and development of models related to antibody properties. His core research centers on the development and validation of models for antibody developability and intrinsically disordered proteins (IDPs), contributing to the advancement of AI-driven drug discovery. These models are poised to facilitate future antibody drug development.\n\nDuring the development of the TFDesign-sdAb computational platform, Researcher Qin Chuang also played a key role, taking primary responsibility for model development and validation. He contributed significantly to the workflow development for AI-based antibody therapeutics.\n\nWithin the team, he is responsible for collecting, designing, and validating relevant modeling tools. His work forms an essential bridge between AI-driven molecular design, experimental verification, and translational development, accelerating the path from computational modeling to therapeutic application.",
+    "links": {
+      "email": "22301010013@m.fudan.edu.cn",
+      "github": "#", 
+      "homepage": "#"
+    }
+  },
+
+  {
+    "id": "suoziming",
+    "name": "Ziming Suo",
+    "role": "Undergraduate Student",
+    "title": "",
+    "avatar": "skin/images/people/suoziming.png",
+    "major": "",
+    "intro": "Ziming Suo is a student in the eight-year Clinical Medicine program and is currently conducting a research internship in our team. Under the guidance of professors, he is receiving research training in antibody structure prediction and has contributed to AbDiff, an all-atom, high-accuracy antibody conformational ensemble prediction model that captures CDR H3 variability.",
+    "links": {
+      "email": "zmsuo22@fudan.edu.cn",
+      "github": "https://github.com/Adlumen-ZM", 
+      "homepage": "https://adlumen-zm.github.io/"
+    }
+  }
+]

@@ -1,6 +1,90 @@
 @charset "utf-8";
 @media screen and (max-width: 980px) {
-	
+
+/* ===== 让平板(<=980)导航完全复用手机的汉堡菜单 ===== */
+
+/* 菜单默认隐藏 */
+.head_menu {
+display: none;
+position: absolute;
+width: 100%;
+top: 100%;
+left: 0;
+background: #0071c1;
+
+/* 关键：避免桌面端 flex/间距/边距影响下拉菜单 */
+flex-direction: column;
+margin: 0;
+gap: 0;
+}
+
+/* 三条杠容器显示 */
+.menu_orther {
+display: flex;
+align-items: center;
+}
+
+/* 三条杠本体：把原来 <=690 的 headmenu 样式搬到这里 */
+.headmenu {
+display: block;
+width: 0.6rem;
+height: 0.01rem;
+background: #ffffff;
+margin-top: .2rem;
+transition: 0.4s all ease;
+margin-left: 0.3rem;
+}
+.headmenu.menu1 { margin-top: 0; }
+
+/* 变成“X”的动画：同样从 <=690 搬到这里 */
+.m_menu.active span.headmenu.menu2 {
+transform: rotate(-45deg);
+margin-top: 0;
+}
+.m_menu.active span.headmenu.menu3 {
+opacity: 0;
+margin-top: 0;
+}
+.m_menu.active .headmenu.menu1 {
+transform: rotateZ(45deg);
+}
+
+/* 下拉菜单项样式：让平板和手机一致（只影响导航，不影响其它部分） */
+.head_menu li a {
+color: #fff;
+font-size: .28rem;
+display: block;
+padding: 0.3rem .5rem;
+border-top: 0.01rem solid #ffffff;
+}
+.head_menu li:first-child a { border-top: none; }
+
+.head_menu li.active a {
+color: #fff;
+background: #DC9016;
+}
+
+/* 移动端不需要桌面端下划线动画 */
+.head_menu li a:after { display: none; }
+
+/* JS 会加 active：必须强制显示 */
+.head_menu.active {
+display: block !important;
+}
+.container_pub{
+    width: 95%;
+}
+}
+
+/* 手机：<=690px 才切换为汉堡菜单 */
+@media screen and (max-width: 690px) {
+.header{ padding: .26rem 0; }     /* 顶栏更高 */
+.header_height{ height: 1.1rem; } /* 占位同步变高 */
+.head_logo img{
+max-width: 5rem;
+height: auto;
+display:block;
+}    
 .head_menu {
     display: none;
     position: absolute;
@@ -14,7 +98,7 @@
     align-items: center;
 }
 .container_pub{
-	width: 95%;
+    width: 95%;
 }
 .headmenu {
     display: block;
@@ -43,14 +127,13 @@
     font-size: .28rem;
     line-height: 1.5;
 }
-.head_menu li a {
+.head_menu li a { /* 用来调整下拉框 */
     color: #fff;
-    font-size: .28rem;
+    font-size: .4rem;
     display: block;
-    padding: 0.3rem .5rem;
+    padding: .8rem .5rem;
     border-top: 0.01rem solid #ffffff;
 }
-
 .head_menu li.active a {
     color: #fff;
     background: #DC9016;
@@ -62,10 +145,16 @@
     width: 47%;
 }
 .pelle_left {
-    width: 50%;
-    margin: 0 auto;
+    float: none;              /* 关键：干掉 style.css 的 float:left */
+    width: 100%;
+    margin: 0 auto .35rem;    /* 这时 auto 才会生效 */
 }
+.pelle_left img{
+    display: block;           /* 避免 inline 图片的基线/空隙问题 */
+    width: 100%;
+    height: auto;
 
+}
 .pelle_ri {
     width: 100%;
 }
@@ -137,15 +226,91 @@
     text-align: center;
 }
 .pelle_ri4 {
-    font-size: .20px;
+    font-size: .6rem;
     text-align: center;
+    box-sizing: border-box;
+    padding: 0 1rem;   /* 左右间距：改这里 */
 }
 
 .pelle_ri2 {
-    font-size: .3rem;
+    font-size: .7rem;
+}
+.pelle_ri1 {
+    font-size: .7rem;
+}
+.pelle_ri3 img {
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: 4px;
+}
+.pi-card{
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
-.pelle_ri1 {
-    font-size: .4rem;
+.pelle_bt {
+    font-size: .8rem;
+    color: #0071c1;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: .8rem;
+    margin-top: .8rem;   /* ↑ 增大：离上面更远；减小：更靠近 */
+}
+
+/* 关键：取消 style.css 的 float:left（否则会继续环绕） */
+.pi-card .pelle_left,
+.pi-photo{
+float: none;
+width: 72%;
+margin: 0 auto .35rem;
+}
+
+.pi-photo-img{
+width: 20%;
+height: auto;
+display: block;
+}
+
+.pi-content{
+width: 100%;
+}
+
+/* 姓名/职称居中（你也可以改成 left） */
+.pi-name,
+.pi-title{
+text-align: center;
+}
+
+/* icon 单独一行居中排列 */
+.pi-icons{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: .22rem;
+margin: .28rem 0 .35rem;
+}
+.pi-icons a{ margin-right: 0; } /* 覆盖 style.css 里 a 的 margin-right :contentReference[oaicite:5]{index=5} */
+/* 个人介绍：建议左对齐更好读（你也可以改 center） */
+.pi-bio{
+text-align: left;
+}
+/* 以下是对于成员卡片的自适应调整 */
+.members_im_a_1{
+  font-size: .8rem;       /* “Members” 标题字号 */
+  margin-bottom: .35rem;   /* 标题与卡片列表间距 */
+}
+/* 4) Name/Role（替代原 .me_li_a/.me_li_b） */
+.me_li_item.me_card_v2 .me_name{
+margin-top: 12px;
+font-size: .7rem;       /* 你原来 .me_li_a 就是 .3rem */
+color: #000;            /* 图2更像黑色；想用蓝色就改回 #0071c1 */
+font-weight: 700;
+}
+.me_li_item.me_card_v2 .me_role{
+margin-top: 6px;
+font-size: .45rem;       /* 你原来 .me_li_b 就是 .2rem */
+color: #666;
+font-style: italic;     /* 图2是斜体；不想要就删 */
 }
 }

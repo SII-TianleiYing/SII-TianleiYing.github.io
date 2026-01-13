@@ -1,0 +1,58 @@
+[
+  {
+    "id": "2024-abbench",
+    "name": "AbBench",
+    "abstract": "Standardized antibody structure benchmark with curated splits for fair model comparison.",
+    "links": "https://example.com/abbench",
+    "graphical_abstract": "skin/images/databases/abbench.jpg"
+  },
+  {
+    "id": "2024-paratope-atlas",
+    "name": "ParatopeAtlas",
+    "abstract": "Annotated paratope and epitope interface atlas for antibody–antigen interaction studies.",
+    "links": "https://example.com/paratope-atlas",
+    "graphical_abstract": "skin/images/databases/paratope_atlas.png"
+  },
+  {
+    "id": "2025-abdock-set",
+    "name": "AbDockSet",
+    "abstract": "Docking-ready antibody–antigen complex set with decoys and evaluation metrics.",
+    "links": "https://example.com/abdock-set",
+    "graphical_abstract": "skin/images/databases/abdock_set.jpg"
+  },
+  {
+    "id": "2025-cdr-flex",
+    "name": "CDRFlex",
+    "abstract": "CDR loop flexibility dataset with multi-state conformations and metadata for learning dynamics.",
+    "links": "https://example.com/cdrflex",
+    "graphical_abstract": "skin/images/databases/cdrflex.webp"
+  },
+  {
+    "id": "2025-immurep-atlas",
+    "name": "ImmuRepAtlas",
+    "abstract": "Immune repertoire sequences across tissues and conditions for clonal tracking and embedding.",
+    "links": "https://example.com/immurep-atlas",
+    "graphical_abstract": "skin/images/databases/immurep_atlas.jpg"
+  },
+  {
+    "id": "2024-tcr-pmhc",
+    "name": "TCRpMHC",
+    "abstract": "TCR–peptide–MHC interaction dataset for specificity modeling and binding prediction.",
+    "links": "https://example.com/tcr-pmhc",
+    "graphical_abstract": "skin/images/databases/tcr_pmhc.png"
+  },
+  {
+    "id": "2025-hla-coverage",
+    "name": "HLACoverage",
+    "abstract": "HLA allele coverage and binding landscape dataset for immunogenicity screening workflows.",
+    "links": "https://example.com/hla-coverage",
+    "graphical_abstract": "skin/images/databases/hla_coverage.jpg"
+  },
+  {
+    "id": "2024-cytokine-net",
+    "name": "CytokineNet",
+    "abstract": "Cytokine signaling interaction network dataset with perturbation annotations for immune modeling.",
+    "links": "https://example.com/cytokine-net",
+    "graphical_abstract": "skin/images/databases/cytokine_net.jpg"
+  }
+]

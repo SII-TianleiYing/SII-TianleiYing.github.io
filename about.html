@@ -103,28 +103,129 @@ Text text text text text text text text text text text text text text text text 
 </div>
 		</div>
 		
-		<div class="footer">
-			<div class="container_pub">
-				<div class="logo_list">
-					<div class="logo_item">
-						<img src="skin/images/logo1.svg" alt="">
-					</div>
-					<div class="logo_item">
-						<img src="skin/images/logo2.png" alt="">
-					</div>
-					<div class="logo_item">
-						<img src="skin/images/logo3.jpg" alt="">
-					</div>
-					<div class="logo_item">
-						<img src="skin/images/logo4.png" alt="">
-					</div>
-				</div>
-			</div>
-			<div class="foot">
-				<p>Total pageviews:79</p>
-				<p>Pageview counter powered by FiniCounter (counts total hits, not unique visitors).</p>
-			</div>
-		</div>
+        <div class="footer footer_dark">
+            <div class="container_pub"></div>
+                <div class="logo_list">
+                    <div class="logo_item">
+                        <a href="https://www.fudan.edu.cn" target="_blank" rel="noopener noreferrer">
+                        <img src="skin/logo/fudan.svg" alt="Fudan University">
+                        </a>
+                    </div>
+                    <div class="logo_item">
+                        <a href="https://www.sii.edu.cn/main.htm" target="_blank" rel="noopener noreferrer">
+                        <img src="skin/logo/sii.svg" alt="Shanghai Institute of Immunology">
+                        </a>
+                    </div>
+
+                </div>
+                
+                <div class="foot">
+                    <p>
+                        Total pageviews:
+                        <span id="finicount_views" style="padding-left: 4px;">--</span>
+                    </p>
+                    <p>
+                        Pageview counter powered by
+                        <a href="https://github.com/finisky/finicounter/tree/master" target="_blank" rel="noopener" style="color: rgba(255,255,255,.78); text-decoration:  underline dashed">
+                        FiniCounter
+                        </a>
+                        (counts total hits, not unique visitors).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var copyBtn = document.querySelector('.bibtex-copy-button');
+            var codeEl  = document.getElementById('bibtex-code');
+
+            if (!copyBtn || !codeEl) return;
+
+            copyBtn.addEventListener('click', function () {
+            var text = codeEl.innerText || codeEl.textContent;
+
+            function onSuccess() {
+                copyBtn.classList.add('copied');
+                setTimeout(function () {
+                copyBtn.classList.remove('copied');
+                }, 1200);
+            }
+
+            function onFail() {
+                console.warn('Copy BibTeX failed');
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                .then(onSuccess)
+                .catch(onFail);
+            } else {
+                var range = document.createRange();
+                range.selectNodeContents(codeEl);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                try {
+                var ok = document.execCommand('copy');
+                ok ? onSuccess() : onFail();
+                } catch (e) {
+                onFail();
+                }
+                selection.removeAllRanges();
+            }
+            });
+        });
+        </script>
+
+        <!--counter-->
+        <script async src="//finicounter.eu.org/finicounter.js"></script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var copyBtn = document.querySelector('.bibtex-copy-button');
+            var codeEl  = document.getElementById('bibtex-code');
+
+            if (!copyBtn || !codeEl) return;
+
+            copyBtn.addEventListener('click', function () {
+            var text = codeEl.innerText || codeEl.textContent;
+
+            function onSuccess() {
+                copyBtn.classList.add('copied');
+                setTimeout(function () {
+                copyBtn.classList.remove('copied');
+                }, 1200);
+            }
+
+            function onFail() {
+                console.warn('Copy BibTeX failed');
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                .then(onSuccess)
+                .catch(onFail);
+            } else {
+                var range = document.createRange();
+                range.selectNodeContents(codeEl);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                try {
+                var ok = document.execCommand('copy');
+                ok ? onSuccess() : onFail();
+                } catch (e) {
+                onFail();
+                }
+                selection.removeAllRanges();
+            }
+            });
+        });
+        </script>
+
+        <!--counter-->
+        <script async src="//finicounter.eu.org/finicounter.js"></script>
 
 		<script src="skin/js/swiper-bundle.min.js"></script>
 		

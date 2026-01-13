@@ -40,7 +40,7 @@
 					</ul>
 					<div class="menu_orther">
 						
-						<!-- <a href="" class="button_style1 button_hover2 ">我要下单</a> -->
+						<!-- <a href="" class="button_style1 button_hover2 "></a> -->
 						<div class="m_menu">
 							<span class="headmenu menu1"></span>
 							<span class="headmenu menu2"></span>
@@ -51,298 +51,110 @@
 			</div>
 		</div>
 
-		<div class="cation">
-			<div class="container_pub" >
-
-				<div class="cation_item">
-
-					<div class="cation_item_flex">
-						<div class="cation_item_flex_left">
-Journal Article
-						</div>
-						<div class="cation_item_flex_nf">
-2025
-						</div>
-					</div>
-
-
-  <div class="cation_item_li">
-        <div class="item_counter">1</div>
-        <div class="cation_item_li_bt">
-            <h3>Kong, Y., Shi, J., Wu, F. et al. A synergistic generative-ranking framework for tailored design of therapeutic single-domain antibodies. Cell Discov 11, 85 (2025).</h3>
-            <p>https://doi.org/10.1038/s41421-025-00843-8（IF=12.5）<span class="initial_state"> - 默认全隐藏</span></p>
-            
-            <div class="tp_pub_menu">
-                <div class="tp_tab_links">
-                    <span class="tp_abstract_link">
-                        <a href="javascript:void(0);" onclick="showSection(this, 'abstract')">
-                            <i class="fas fa-file-alt"></i> Abstract
-                        </a>
-                    </span>
-                    <span class="tp_resource_link">
-                        <a href="javascript:void(0);" onclick="showSection(this, 'links')">
-                            <i class="fas fa-link"></i> Links
-                        </a>
-                    </span>
-                </div>
-                <button class="close_btn" onclick="hideAllSections(this)">
-                    <i class="fas fa-times"></i> Close All
-                </button>
+        <div class="cation">
+            <div class="container_pub">
+            <div class="pub_searchbar">
+                <input id="pubSearchInput" type="search" placeholder="Search publications..." autocomplete="off">
+                <button id="pubSearchClear" type="button" aria-label="Clear search">×</button>
             </div>
 
-            <div class="tp_abstract">
-                <div class="tp_content_header">
-                    <div class="tp_content_title">
-                        <i class="fas fa-file-alt"></i> Abstract
-                    </div>
-                    <button class="tp_close_content" onclick="hideCurrentSection(this)" title="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="tp_abstract_content">
-                    <p>A synergistic generative-ranking framework for tailored design of therapeutic single-domain antibodies. Single-domain antibodies (sdAbs), also known as nanobodies, have emerged as promising therapeutic agents due to their small size, high stability, and ability to bind challenging epitopes. However, the rational design of sdAbs with desired properties remains a significant challenge.</p>
-                    
-                    <p>In this study, we present a synergistic generative-ranking framework that combines deep generative models with ranking algorithms to accelerate the design of therapeutic sdAbs. Our framework generates diverse sdAb sequences and ranks them based on predicted properties such as affinity, stability, and developability.</p>
-                    
-                    <p>We demonstrate the effectiveness of our approach by designing sdAbs targeting several disease-relevant antigens, with experimental validation showing improved binding affinity and thermostability compared to existing variants. This framework provides a powerful tool for the rapid development of next-generation sdAb-based therapeutics.</p>
-                </div>
-            </div>
-            
-            <div class="tp_links">
-                <div class="tp_content_header">
-                    <div class="tp_content_title">
-                        <i class="fas fa-link"></i> Related Links
-                    </div>
-                    <button class="tp_close_content" onclick="hideCurrentSection(this)" title="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="tp_links_entry">
-                    <ul class="tp_pub_list">
-                        <li>
-                            <i class="fas fa-globe"></i>
-                            <a class="tp_pub_list" href="https://pubs.acs.org/doi/full/10.1021/jacs.5c16108" title="JACS" target="_blank">JACS - Full Text</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-file-pdf"></i>
-                            <a class="tp_pub_list" href="https://pubs.acs.org/doi/pdf/10.1021/jacs.5c16108?ref=article_openPDF" title="PDF" target="_blank">Download PDF Version</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-external-link-alt"></i>
-                            <a class="tp_pub_list" href="https://dx.doi.org/10.1021/jacs.5c16108" title="Follow DOI:10.1021/jacs.5c16108" target="_blank">DOI: 10.1021/jacs.5c16108</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-database"></i>
-                            <a class="tp_pub_list" href="https://pubmed.ncbi.nlm.nih.gov/" title="PubMed" target="_blank">PubMed Entry</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="no_content">
-                <i class="fas fa-folder-open"></i>
-                <p>No content selected. Click on "Abstract" or "Links" to view content.</p>
-                <button class="close_btn" onclick="showSectionFromNoContent(this)" style="margin-top: 10px;">
-                    <i class="fas fa-file-alt"></i> Show Abstract
-                </button>
+            <div id="publicationsContainer"></div>
             </div>
         </div>
-    </div>
 
-    <div class="cation_item_li">
-        <div class="item_counter">2</div>
-        <div class="cation_item_li_bt">
-            <h3>Smith, J., Doe, M., Lee, R. et al. Advanced machine learning approaches for protein structure prediction. Nature Methods 22, 45 (2025).</h3>
-            <p>https://doi.org/10.1038/nmeth.2025.45（IF=15.2）</p>
-            
-            <div class="tp_pub_menu">
-                <div class="tp_tab_links">
-                    <span class="tp_abstract_link">
-                        <a href="javascript:void(0);" onclick="showSection(this, 'abstract')">
-                            <i class="fas fa-file-alt"></i> Abstract
-                        </a>
-                    </span>
-                    <span class="tp_resource_link">
-                        <a href="javascript:void(0);" onclick="showSection(this, 'links')">
-                            <i class="fas fa-link"></i> Links
-                        </a>
-                    </span>
-                </div>
-                <button class="close_btn" onclick="hideAllSections(this)">
-                    <i class="fas fa-times"></i> Close All
-                </button>
-            </div>
-
-            <div class="tp_abstract">
-                <div class="tp_content_header">
-                    <div class="tp_content_title">
-                        <i class="fas fa-file-alt"></i> Abstract
-                    </div>
-                    <button class="tp_close_content" onclick="hideCurrentSection(this)" title="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="tp_abstract_content">
-                    <p>Advanced machine learning approaches for protein structure prediction. Protein structure prediction has been revolutionized by deep learning methods in recent years. In this study, we introduce novel architectures that combine attention mechanisms with geometric deep learning to improve the accuracy of protein structure prediction, particularly for challenging targets with limited homologous sequences.</p>
-                    
-                    <p>Our method achieves state-of-the-art performance on multiple benchmark datasets, demonstrating significant improvements in both accuracy and computational efficiency compared to existing approaches.</p>
-                </div>
-            </div>
-            
-            <div class="tp_links">
-                <div class="tp_content_header">
-                    <div class="tp_content_title">
-                        <i class="fas fa-link"></i> Related Links
-                    </div>
-                    <button class="tp_close_content" onclick="hideCurrentSection(this)" title="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="tp_links_entry">
-                    <ul class="tp_pub_list">
-                        <li>
-                            <i class="fas fa-globe"></i>
-                            <a class="tp_pub_list" href="https://www.nature.com/articles/nmeth.2025.45" title="Nature" target="_blank">Nature Methods - Full Text</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-file-pdf"></i>
-                            <a class="tp_pub_list" href="https://www.nature.com/articles/nmeth.2025.45.pdf" title="PDF" target="_blank">Download PDF Version</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-external-link-alt"></i>
-                            <a class="tp_pub_list" href="https://doi.org/10.1038/nmeth.2025.45" title="Follow DOI" target="_blank">DOI: 10.1038/nmeth.2025.45</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="no_content">
-                <i class="fas fa-folder-open"></i>
-                <p>No content selected. Click on "Abstract" or "Links" to view content.</p>
-                <button class="close_btn" onclick="showSectionFromNoContent(this)" style="margin-top: 10px;">
-                    <i class="fas fa-file-alt"></i> Show Abstract
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="cation_item_li">
-        <div class="item_counter">3</div>
-        <div class="cation_item_li_bt">
-            <h3>Zhang, L., Chen, H., Wang, X. et al. CRISPR-based screening for cancer drug targets. Science 380, 1125-1132 (2024).</h3>
-            <p>https://doi.org/10.1126/science.adk9876（IF=18.9）</p>
-            
-            <div class="tp_pub_menu">
-                <div class="tp_tab_links">
-                    <span class="tp_abstract_link">
-                        <a href="javascript:void(0);" onclick="showSection(this, 'abstract')">
-                            <i class="fas fa-file-alt"></i> Abstract
-                        </a>
-                    </span>
-                    <span class="tp_resource_link">
-                        <a href="javascript:void(0);" onclick="showSection(this, 'links')">
-                            <i class="fas fa-link"></i> Links
-                        </a>
-                    </span>
-                </div>
-                <button class="close_btn" onclick="hideAllSections(this)">
-                    <i class="fas fa-times"></i> Close All
-                </button>
-            </div>
-
-            <div class="tp_abstract">
-                <div class="tp_content_header">
-                    <div class="tp_content_title">
-                        <i class="fas fa-file-alt"></i> Abstract
-                    </div>
-                    <button class="tp_close_content" onclick="hideCurrentSection(this)" title="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="tp_abstract_content">
-                    <p>CRISPR-based screening for cancer drug targets. Genome-wide CRISPR screening has become a powerful approach for identifying novel therapeutic targets in cancer. Here, we developed an improved CRISPR screening platform that integrates single-cell RNA sequencing with phenotypic screening to identify context-specific vulnerabilities in cancer cells.</p>
-                    
-                    <p>Using this approach, we identified several previously unknown synthetic lethal interactions that could be exploited for targeted cancer therapy. Our findings provide new insights into cancer biology and potential therapeutic strategies.</p>
-                </div>
-            </div>
-            
-            <div class="tp_links">
-                <div class="tp_content_header">
-                    <div class="tp_content_title">
-                        <i class="fas fa-link"></i> Related Links
-                    </div>
-                    <button class="tp_close_content" onclick="hideCurrentSection(this)" title="Close">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div class="tp_links_entry">
-                    <ul class="tp_pub_list">
-                        <li>
-                            <i class="fas fa-globe"></i>
-                            <a class="tp_pub_list" href="https://www.science.org/doi/10.1126/science.adk9876" title="Science" target="_blank">Science - Full Text</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-file-pdf"></i>
-                            <a class="tp_pub_list" href="https://www.science.org/doi/pdf/10.1126/science.adk9876" title="PDF" target="_blank">Download PDF Version</a>
-                        </li>
-                        <li>
-                            <i class="fas fa-external-link-alt"></i>
-                            <a class="tp_pub_list" href="https://doi.org/10.1126/science.adk9876" title="Follow DOI" target="_blank">DOI: 10.1126/science.adk9876</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="no_content">
-                <i class="fas fa-folder-open"></i>
-                <p>No content selected. Click on "Abstract" or "Links" to view content.</p>
-                <button class="close_btn" onclick="showSectionFromNoContent(this)" style="margin-top: 10px;">
-                    <i class="fas fa-file-alt"></i> Show Abstract
-                </button>
-            </div>
-        </div>
-    </div>
-
-				
-				
-				</div>
-			</div>
-		</div>
 	
-		<div class="footer">
-			<div class="container_pub">
-				<div class="logo_list">
-					<div class="logo_item">
-						<img src="skin/images/logo1.svg" alt="">
-					</div>
-					<div class="logo_item">
-						<img src="skin/images/logo2.png" alt="">
-					</div>
-					<div class="logo_item">
-						<img src="skin/images/logo3.jpg" alt="">
-					</div>
-					<div class="logo_item">
-						<img src="skin/images/logo4.png" alt="">
-					</div>
-				</div>
-			</div>
-			<div class="foot">
-				<p>Total pageviews:79</p>
-				<p>Pageview counter powered by FiniCounter (counts total hits, not unique visitors).</p>
-			</div>
-		</div>
+        <div class="footer footer_dark">
+            <div class="container_pub"></div>
+                <div class="logo_list">
+                    <div class="logo_item">
+                        <a href="https://www.fudan.edu.cn" target="_blank" rel="noopener noreferrer">
+                        <img src="skin/logo/fudan.svg" alt="Fudan University">
+                        </a>
+                    </div>
+                    <div class="logo_item">
+                        <a href="https://www.sii.edu.cn/main.htm" target="_blank" rel="noopener noreferrer">
+                        <img src="skin/logo/sii.svg" alt="Shanghai Institute of Immunology">
+                        </a>
+                    </div>
+
+                </div>
+                
+                <div class="foot">
+                    <p>
+                        Total pageviews:
+                        <span id="finicount_views" style="padding-left: 4px;">--</span>
+                    </p>
+                    <p>
+                        Pageview counter powered by
+                        <a href="https://github.com/finisky/finicounter/tree/master" target="_blank" rel="noopener" style="color: rgba(255,255,255,.78); text-decoration:  underline dashed">
+                        FiniCounter
+                        </a>
+                        (counts total hits, not unique visitors).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var copyBtn = document.querySelector('.bibtex-copy-button');
+            var codeEl  = document.getElementById('bibtex-code');
+
+            if (!copyBtn || !codeEl) return;
+
+            copyBtn.addEventListener('click', function () {
+            var text = codeEl.innerText || codeEl.textContent;
+
+            function onSuccess() {
+                copyBtn.classList.add('copied');
+                setTimeout(function () {
+                copyBtn.classList.remove('copied');
+                }, 1200);
+            }
+
+            function onFail() {
+                console.warn('Copy BibTeX failed');
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                .then(onSuccess)
+                .catch(onFail);
+            } else {
+                var range = document.createRange();
+                range.selectNodeContents(codeEl);
+                var selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                try {
+                var ok = document.execCommand('copy');
+                ok ? onSuccess() : onFail();
+                } catch (e) {
+                onFail();
+                }
+                selection.removeAllRanges();
+            }
+            });
+        });
+        </script>
+
+        <!--counter-->
+        <script async src="//finicounter.eu.org/finicounter.js"></script>
 
 		<script src="skin/js/swiper-bundle.min.js"></script>
 		
 		
 		<script src="skin/js/common.js"></script>
-		 <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
+
+        <script src="skin/js/publication.js"></script>
+	
+        <script>
+        var swiper = new Swiper(".mySwiper", {
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        });
+        </script>
 <script>
 // 初始化 Swiper，使用外部元素作为分页器
 var swiper = new Swiper('.mySwiper1', {
@@ -506,6 +318,7 @@ var swiper = new Swiper('.mySwiper1', {
             });
         });
     </script>
+    
 
 <style>
 

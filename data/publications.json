@@ -1,0 +1,149 @@
+[
+  {
+    "id": "2025-kong-sdab-cell-disco",
+    "year": 2025,
+    "date": "2025-06-15",
+    "type": "journal",
+    "venue": { "name": "Cell Discovery", "if": "12.5" },
+    "title": "A synergistic generative-ranking framework for tailored design of therapeutic single-domain antibodies.",
+    "authors": ["Y. Kong", "J. Shi", "F. Wu", "T. Ying"],
+    "doi": "10.1038/s41421-025-00843-8",
+    "abstract": "Single-domain antibodies enable binding to challenging epitopes, but rationally designing stable, developable sdAbs remains difficult.\n\nWe present a generative-ranking pipeline that proposes diverse candidates and prioritizes them using multi-objective predictors, improving affinity and stability in downstream validation.\n\nThis study illustrates how conditional generation plus ranking can accelerate therapeutic antibody optimization.",
+    "links": [
+      { "kind": "paper", "label": "Journal Page", "url": "https://example.com/paper/2025-sdab" },
+      { "kind": "pdf", "label": "PDF", "url": "https://example.com/paper/2025-sdab.pdf" }
+    ]
+  },
+  {
+    "id": "2024-liu-biomimetic-apatite-acsnano",
+    "year": 2024,
+    "date": "2024-11-02",
+    "type": "journal",
+    "venue": { "name": "ACS Nano", "if": "15.8" },
+    "title": "Programmable peptide scaffolds for oriented apatite growth on enamel-like substrates.",
+    "authors": ["Q. Liu", "M. Zhang", "H. Chen", "T. Ying"],
+    "doi": "10.1021/acsnano.4c01234",
+    "abstract": "Oriented apatite growth is central to enamel-like regeneration but remains challenging to control in vitro.\n\nWe design modular peptide scaffolds that present mineral-binding motifs with tunable spacing, enabling improved alignment and crystallite continuity on model enamel surfaces.\n\nThe results suggest a route toward predictable, directionally controlled mineralization for restorative biomaterials.",
+    "links": [
+      { "kind": "paper", "label": "Journal Page", "url": "https://example.com/paper/2024-apatite" },
+      { "kind": "doi", "label": "DOI", "url": "https://doi.org/10.1021/acsnano.4c01234" }
+    ]
+  },
+  {
+    "id": "2024-zhou-ptmicrofluidic-sensors-naturecomm",
+    "year": 2024,
+    "date": "2024-03-18",
+    "type": "journal",
+    "venue": { "name": "Nature Communications", "if": "16.6" },
+    "title": "PT-symmetric microfluidic resonators for ultra-low signal biosensing under flow.",
+    "authors": ["G. Zhou", "R. Patel", "S. Wang", "T. Ying"],
+    "doi": "10.1038/s41467-024-12345-6",
+    "abstract": "Detecting weak biomolecular signals in flowing samples is limited by drift and readout noise.\n\nWe implement PT-symmetric resonance in a microfluidic-compatible architecture to enhance linewidth narrowing and improve sensitivity to minute perturbations.\n\nThis approach provides a practical path for robust sensing in complex biofluids.",
+    "links": [
+      { "kind": "paper", "label": "Journal Page", "url": "https://example.com/paper/2024-pt-resonator" },
+      { "kind": "pdf", "label": "PDF", "url": "https://example.com/paper/2024-pt-resonator.pdf" }
+    ]
+  },
+  {
+    "id": "2023-chen-rfdiffusion-workshop-neurips",
+    "year": 2023,
+    "date": "2023-12-09",
+    "type": "conference",
+    "venue": { "name": "NeurIPS Workshop on Generative Biology", "location": "New Orleans, USA" },
+    "title": "Constraint-guided diffusion for rapid protein backbone generation with functional motifs.",
+    "authors": ["H. Chen", "A. Singh", "J. Kim", "T. Ying"],
+    "doi": "10.48550/arXiv.2312.01234",
+    "abstract": "Diffusion models offer a flexible framework for protein design, but ensuring motif fidelity under multiple constraints can be unstable.\n\nWe present a constraint-guided sampling strategy that maintains motif geometry while improving global fold plausibility.\n\nWorkshop results show improved success rates across diverse conditional design tasks.",
+    "links": [
+      { "kind": "paper", "label": "Workshop Page", "url": "https://example.com/conf/neurips-2023-genbio" },
+      { "kind": "pdf", "label": "PDF", "url": "https://example.com/conf/neurips-2023-genbio.pdf" }
+    ]
+  },
+  {
+    "id": "2023-wang-nanopore-impedance-iemrs",
+    "year": 2023,
+    "date": "2023-07-21",
+    "type": "conference",
+    "venue": { "name": "IEEE EMBS (EMR) Symposium", "location": "Berlin, Germany" },
+    "title": "Impedance spectroscopy with solid-state nanopores for label-free protein fingerprinting.",
+    "authors": ["S. Wang", "L. Perez", "D. Huang", "T. Ying"],
+    "doi": "10.1109/EMR.2023.012345",
+    "abstract": "Solid-state nanopores enable single-entity detection, but distinguishing proteins often requires richer signals than simple blockade current.\n\nWe integrate impedance readouts to extract frequency-dependent signatures that improve separability across analytes.\n\nThe prototype demonstrates robust discrimination under realistic electrolyte conditions.",
+    "links": [
+      { "kind": "paper", "label": "Proceedings", "url": "https://example.com/conf/ieee-emr-2023-nanopore" }
+    ]
+  },
+  {
+    "id": "2022-zhang-enamelrepair-preprint-biorxiv",
+    "year": 2022,
+    "date": "2022-10-05",
+    "type": "preprint",
+    "venue": { "name": "bioRxiv" },
+    "title": "Self-assembling protein–peptide composites for rapid enamel lesion remineralization.",
+    "authors": ["M. Zhang", "Y. Li", "K. Ito", "T. Ying"],
+    "doi": "10.1101/2022.10.05.510000",
+    "abstract": "Remineralizing early enamel lesions requires delivering mineral precursors while guiding organized growth.\n\nWe develop self-assembling protein–peptide composites that form adherent films and accelerate mineral recovery in demineralized enamel models.\n\nPreprint findings motivate controlled studies on structure–function relationships in guided mineralization.",
+    "links": [
+      { "kind": "paper", "label": "Preprint", "url": "https://example.com/preprint/2022-enamel-composite" },
+      { "kind": "pdf", "label": "PDF", "url": "https://example.com/preprint/2022-enamel-composite.pdf" }
+    ]
+  },
+  {
+    "id": "2021-li-mof-c4-isomers-jacs",
+    "year": 2021,
+    "date": "2021-05-27",
+    "type": "journal",
+    "venue": { "name": "Journal of the American Chemical Society", "if": "15.0" },
+    "title": "Ligand-engineered Cu–N frameworks for selective cis/trans-2-butene separation.",
+    "authors": ["Y. Li", "P. Kumar", "J. Sun", "T. Ying"],
+    "doi": "10.1021/jacs.1c04567",
+    "abstract": "Separating C4 isomers is energy-intensive due to subtle differences in size and adsorption behavior.\n\nWe report Cu–N frameworks with tuned pore chemistry that enhance selectivity between cis- and trans-2-butene under mixed-gas breakthrough conditions.\n\nThe study highlights design principles linking ligand environment to isomer discrimination.",
+    "links": [
+      { "kind": "paper", "label": "JACS Full Text", "url": "https://example.com/paper/2021-mof-c4" },
+      { "kind": "pdf", "label": "PDF", "url": "https://example.com/paper/2021-mof-c4.pdf" }
+    ]
+  },
+  {
+    "id": "2020-ying-patent-pt-sensing-platform",
+    "year": 2020,
+    "date": "2020-02-14",
+    "type": "patent",
+    "venue": { "name": "WIPO Patent Application", "location": "Geneva, Switzerland" },
+    "title": "PT-symmetric sensing platform for enhanced detection of weak biochemical signals.",
+    "authors": ["T. Ying", "S. Wang", "G. Zhou"],
+    "doi": "WO2020123456A1",
+    "abstract": "This patent application describes a PT-symmetric sensing architecture designed to amplify weak perturbations in coupled resonant systems.\n\nThe platform supports multiple readout modalities and is compatible with miniaturized fluidic sampling modules.\n\nClaims cover device topology, calibration methods, and use in low-abundance biomarker detection.",
+    "links": [
+      { "kind": "paper", "label": "Patent Record", "url": "https://example.com/patent/WO2020123456A1" }
+    ]
+  },
+  {
+    "id": "2019-chen-bookchapter-biomineralization",
+    "year": 2019,
+    "date": "2019-08-30",
+    "type": "bookchapter",
+    "venue": { "name": "Advances in Biomineralization", "location": "Springer" },
+    "title": "Hierarchical mineral–protein assemblies: principles for enamel-inspired materials.",
+    "authors": ["H. Chen", "R. Nguyen", "T. Ying"],
+    "doi": "10.1007/978-3-030-00000-0_12",
+    "abstract": "Enamel-inspired materials require coordination across molecular, mesoscale, and macroscale organization.\n\nThis chapter reviews mechanisms of mineral–protein co-assembly and discusses design rules for anisotropic, hierarchical mineral growth.\n\nWe outline opportunities for programmable scaffolds and dynamic assembly pathways in restorative dentistry.",
+    "links": [
+      { "kind": "paper", "label": "Book Page", "url": "https://example.com/book/biomineralization-ch12" }
+    ]
+  },
+  {
+    "id": "2018-kim-dataset-proteinfold-benchmark",
+    "year": 2018,
+    "date": "2018-04-12",
+    "type": "dataset",
+    "venue": { "name": "Zenodo" },
+    "title": "Protein fold constraint benchmark set for conditional generative design (v1.0).",
+    "authors": ["J. Kim", "L. An", "T. Ying"],
+    "doi": "10.5281/zenodo.1234567",
+    "abstract": "We release a curated benchmark of protein fold constraints to evaluate conditional generative design methods.\n\nThe dataset includes standardized splits, motif annotations, and evaluation scripts to compare success rates across tasks.\n\nThis resource supports reproducible assessment of structure generation methods under diverse constraints.",
+    "links": [
+      { "kind": "data", "label": "Zenodo Dataset", "url": "https://example.com/data/zenodo-1234567" },
+      { "kind": "code", "label": "Code (GitHub)", "url": "https://example.com/code/proteinfold-benchmark" }
+    ]
+  }
+]

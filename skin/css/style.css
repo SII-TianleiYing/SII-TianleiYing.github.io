@@ -106,7 +106,8 @@ textarea{resize:none;}
     color: var(--main_color);
 }
 .head_logo {
-    width: 5.68rem;
+    max-width: 3rem;
+    height: auto;
     cursor: pointer;
 }
 
@@ -136,7 +137,7 @@ textarea{resize:none;}
 }
 
 .head_menu li a {
-    font-size: .18rem;
+    font-size: .22rem;
     position: relative;
     transition: 0.4s all ease;
     color: #fff;
@@ -158,8 +159,21 @@ textarea{resize:none;}
 	transition: 0.4s all ease;
 }
 .head_menu li.active a:after,.head_menu li:hover a:after{
-width: .21rem;
+width: .28rem;
 }
+
+/* ===== Desktop default (>=981px) ===== */
+/* 桌面：显示横向菜单，隐藏汉堡按钮 */
+.menu_orther { 
+  display: none; 
+}
+.headmenu { 
+  display: none; 
+}
+.head_menu {
+  display: flex; /* 你本来就是 flex，这里只是兜底 */
+}
+
 .mySwiper .swiper-slide{
     position: relative;
 }
@@ -285,6 +299,113 @@ width: .21rem;
 .footer {
     background: #fafafa;
 }
+
+/* ===== Footer: 阴影风格以及各种Logo ===== */
+.footer.footer_dark{
+  background: #2f3b44;        /* 深色底 */
+  padding: 1.1rem 0 .8rem;    /* 整体上下留白：你想更“厚”就加大 */
+}
+
+/* logo 区：居中、不要原来的 49% 宽/space-evenly */
+.footer.footer_dark .logo_list{
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: .6rem;
+  padding-bottom: .55rem;     /* logo 到横线的距离 */
+}
+
+/* logo 大小与“变白”（如果你的 logo 本身不是白色） */
+.footer.footer_dark .logo_item img{
+  display: block;
+  margin: 0 auto;
+  height: 1.3rem;             /* 控制 logo 高度 */
+  width: auto;
+  filter: brightness(0) invert(1); /* 变白：PNG/SVG 都常用，必要时可删 */
+}
+
+/* 横线 + 文本区 */
+.footer.footer_dark .foot{
+  border-top: .01rem solid rgba(255,255,255,.25);  /* 白色横线(半透明) */
+  padding: .45rem 0 0;                              /* 横线到文字的间距 */
+  text-align: center;
+  width: min(14rem, 92%);                           /* 横线不要太满屏 */
+  margin: 0 auto;
+}
+
+/* 文字颜色/字号 */
+.footer.footer_dark .foot p{
+  color: rgba(255,255,255,.78);
+  font-size: .22rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   People footer (dark)
+   ========================= */
+.footer.footer_dark{
+  position: relative;
+  overflow: hidden;
+
+  /* 深色底 + 轻微层次（比纯色更好看） */
+  background: linear-gradient(180deg, #2a343c 0%, #2f3b44 45%, #2b3540 100%);
+
+  /* 你想更“厚”就加大第一个值 */
+  padding: 0.8rem 0 .4rem;
+}
+
+/* 顶部阴影过渡（你要的“深底阴影过渡”关键在这里） */
+.footer.footer_dark::before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:0;
+  height: 35px;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  pointer-events:none;
+}
+
+/* 1) 解决 logo 间距太大：不用 space-evenly，改用 gap */
+.footer.footer_dark .logo_list{
+  width: 100%;                 /* 别再用 49% */
+  justify-content: center;     /* 居中 */
+  gap: 1.2rem;                 /* logo 间距：想更小就 0.8~1.0rem */
+  padding-bottom: .55rem;      /* logo 到横线距离 */
+}
+
+/* 让每个 logo 自己按图片宽度来（不要 20%） */
+.footer.footer_dark .logo_item{
+  width: auto;
+}
+
+/* 统一 logo 高度 + 变白（若本身已是白色，filter 也不影响太大） */
+.footer.footer_dark .logo_item img{
+  height: 1rem;             /* logo 大小：想更大就 1.2rem */
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: .92;
+  transition: opacity .2s ease;
+}
+.footer.footer_dark .logo_item a:hover img{
+  opacity: 1;
+}
+
+/* 2) 解决文字不居中/不白：给 foot 和 p 明确设定 */
+.footer.footer_dark .foot{
+  width: 100%;
+  text-align: center;
+  border-top: .02rem solid rgba(255,255,255,.25); /* 白色横线 */
+  padding: .38rem 0 0;                            /* 横线到文字距离 */
+}
+
+.footer.footer_dark .foot p{
+  color: rgba(255,255,255,.78);   /* 白字 */
+  font-size: .22rem;
+  line-height: 1.7;
+  margin: .06rem 0;
+}
+
 .models_list {
     display: flex;
     justify-content: space-around;
@@ -300,6 +421,7 @@ width: .21rem;
     margin-bottom: 0.4rem;
     border-radius: 0.15rem;
     text-align: center;
+    z-index: 90000;
 }
 
 .modles {
@@ -618,38 +740,58 @@ width: .21rem;
     display: flex;
     justify-content: space-between;
 }
+/* do not use flex anymore */
+
+
+.pelle::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 .pelle_ri1 {
-    font-size: .3rem;
+    font-size: .4rem;
     font-weight: 600;
     margin-bottom: .15rem;
 }
 
 .pelle_ri2 {
-    font-size: .24rem;
+    font-size: .3rem;
+    font-weight: 600;
     color: #999999;
 }
 
 .pelle_left {
-    width: 27%;
+    float: left;
+    width: 35%;
+    margin: 0 20px 15px 0;
 }
 
 .pelle_ri {
-    width: 70%;
+    width: auto;
 }
 
 .pelle_ri4 {
-    font-size: .18rem;
+    font-size: .3rem;
     line-height: 1.5;
 }
 .pelle_ri3 {
     margin-bottom: .3rem;
     margin-top: .25rem;
 }
+.pelle_ri3 img {
+    width: 0.6rem;
+    height: 0.6rem;
+}
 .pelle_ri3 a {
     margin-right: .2rem;
 }
- .members_im_a {
+.modal-icon.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.members_im_a {
             max-width: 1200px;
             margin: 0 auto;
             /* background: white; */
@@ -679,7 +821,7 @@ width: .21rem;
         }
         
         .me_li_item {
-            width: 23%;
+            width: 30%;
             background: white;
             text-align: center;
             border-radius: .15rem;
@@ -785,6 +927,12 @@ width: .21rem;
             background: #45a049;
         }
         
+        .me_li_item_lists a.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        pointer-events: none;
+        }
+
         /* 三栏内容区域样式 */
         .me_content {
             min-height: 300px;
@@ -1022,6 +1170,70 @@ width: .21rem;
                 justify-content: center;
             }
         }
+
+        /* =========================
+        Members Card v2 (square photo + name/role + 3 icons)
+        ========================= */
+
+        /* 1) 改卡片内部排版：从“头像绝对定位”改为“正常流” */
+        .me_li_item.me_card_v2{
+        padding: 16px;          /* 替代原来的 padding-top + padding-bottom */
+        padding-bottom: 16px;
+        }
+
+        /* 2) 禁用旧的圆形漂浮头像（旧结构里是 .tx） */
+        .me_li_item.me_card_v2 .tx{
+        display:none;
+        }
+
+        /* 3) 顶部方形照片 */
+        .me_li_item.me_card_v2 .me_photo{
+        width: 100%;
+        aspect-ratio: 1 / 1;    /* 方形 */
+        overflow: hidden;
+        border-radius: 8px;     /* 想更“硬朗”就改 0~4px */
+        background: #f3f3f3;
+        }
+
+        .me_li_item.me_card_v2 .me_photo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display:block;
+        object-position: 50% 15%; /* 照片顶部对齐 */
+        }
+
+        /* 4) Name/Role（替代原 .me_li_a/.me_li_b） */
+        .me_li_item.me_card_v2 .me_name{
+        margin-top: 12px;
+        font-size: .3rem;       /* 你原来 .me_li_a 就是 .3rem */
+        color: #000;            /* 图2更像黑色；想用蓝色就改回 #0071c1 */
+        font-weight: 700;
+        }
+
+        .me_li_item.me_card_v2 .me_role{
+        margin-top: 6px;
+        font-size: .2rem;       /* 你原来 .me_li_b 就是 .2rem */
+        color: #666;
+        font-style: italic;     /* 图2是斜体；不想要就删 */
+        }
+
+        /* 5) 让图标区域在底部居中，保留原 hover 圆按钮 */
+        .me_li_item.me_card_v2 .me_li_item_lists{
+        margin-top: 12px;
+        margin-bottom: 0;       /* 旧的是 margin-bottom:.16rem 现在不需要 */
+        padding: 0;             /* 旧的是 padding:10px 0 现在更紧凑 */
+        display:flex;
+        justify-content:center;
+        gap: 10px;
+        }
+
+        /* 6) 隐藏旧的文字块（如果旧结构还残留） */
+        .me_li_item.me_card_v2 .me_li_a,
+        .me_li_item.me_card_v2 .me_li_b{
+        display:none;
+        }
+
 .mem_pos {
     background: url(../images/a.jpg);
 }
@@ -1041,3 +1253,307 @@ span#contentStatus {
 .members_im img {
     width: 100%;
 }
+
+/* 576~992：两列布局，但最后一行单卡片要居中 */
+@media (min-width: 577px) and (max-width: 992px) {
+
+  .me_li{
+    justify-content: center;   /* 关键：别用 space-between */
+    gap: 20px;                 /* 你本来就有 gap:20px，可以保留 */
+  }
+
+  .me_li_item{
+    width: calc(50% - 20px);   /* 两列，减掉 gap，避免溢出 */
+    min-width: 240px;          /* 可选：平板上更大一点 */
+  }
+}
+
+.pub_year_label{
+  font-size: .34rem;
+  font-weight: 700;
+  color: #333;
+  margin: .6rem .2rem .15rem;
+}
+
+.pub_type_badge{
+  display: inline-block;
+  padding: .06rem .18rem;
+  border-radius: .08rem;
+  font-size: .18rem;
+  vertical-align: middle;
+  margin-left: .25rem;
+  color: #fff;
+  background: #0071c1; /* 默认蓝 */
+}
+
+/* 这些用于修改Publications的格式 */
+
+/* 不同类型可在这里换色（你后面再细调） */
+.pub_type_badge--conference{ background:#2d8f6f; }
+.pub_type_badge--preprint{ background:#7a4bd6; }
+.pub_type_badge--patent{ background:#d65a4b; }
+.pub_type_badge--dataset{ background:#555; }
+
+.pub_title_link{
+  color:#0066cc;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Publications：缩小“年份 -> 色块(cation_item)”的距离 */
+.cation .cation_item{
+  margin: .25rem 0 1rem;   /* 上、左右、下：把上面从 1rem 改小 */
+}
+
+/* 可选：缩小色块内部白卡片和色块边缘的距离 */
+.cation .cation_item_li{
+  margin: 20px;            /* 原来是 20px */
+}
+
+/* Authors */
+.pub_authors{
+  font-size: .22rem;      /* 想更大就 .24~.28 */
+  color: #333;
+  margin: 0 0 .10rem 0;
+  line-height: 1.4;
+}
+
+/* Title (link) */
+.pub_title_link{
+  font-size: .24rem;      /* 标题字号在这里控最直观 */
+  line-height: 1.25;
+}
+
+/* Type badge (标签) */
+.pub_type_badge{
+  font-size: .20rem;      /* 标签文字大小 */
+  padding: .04rem .1rem; /* 标签内边距 */
+  border-radius: .06rem;  /* 标签圆角 */
+}
+
+/* Venue 行：期刊名/会议名 */
+.pub_venue{
+  font-size: .22rem;
+  font-style: italic;
+  color: #111;
+  margin-top: .08rem;
+  line-height: 1.35;
+}
+
+/* IF / location 这种小字（如果你有单独 span） */
+.pub_venue_meta{
+  font-size: .20rem;
+  font-style: normal;
+  color: #666;
+  margin-left: .10rem;
+}
+
+.pub_venue .pub_type_badge{ font-style: normal; }
+
+/* 去掉按钮区底部横线 */
+.cation .tp_pub_menu{
+  border-bottom: none;
+  padding-bottom: 0; /* 可选：顺便压紧一点 */
+}
+
+/* 隐藏弹窗头部：标题 + 右侧X（Abstract/Links 同理） */
+.cation .tp_abstract .tp_content_header,
+.cation .tp_links .tp_content_header{
+  display: none;
+}
+
+/* Abstract / Links 两个按钮的字号 */
+.cation .tp_abstract_link a,
+.cation .tp_resource_link a{
+  font-size: .20rem;   /* 你想大就 16/18，小就 14 */
+}
+
+/* 右侧 Close 按钮字号（如需） */
+.cation .tp_pub_menu .close_btn{
+  font-size: .20rem;
+}
+
+/* ===== Publications: tighten spacing & set font size ===== */
+
+/* 2) 展开框与按钮行之间的距离 + 展开框内部 padding */
+.cation_item_li .tp_abstract,
+.cation_item_li .tp_links{
+  margin-top: 15px !important;     /* 原来 15px :contentReference[oaicite:4]{index=4} */
+  padding: 12px 16px !important;  /* 原来 20px :contentReference[oaicite:5]{index=5} */
+}
+
+
+/* 4) 展开内容字号（Abstract 正文、Links 列表） */
+.cation_item_li .tp_abstract_content,
+.cation_item_li .tp_links_entry,
+.cation_item_li .tp_pub_list,
+.cation_item_li .tp_pub_list li,
+.cation_item_li .tp_pub_list a{
+  font-size: .20rem !important;
+}
+
+/* 5) 如果你的 Abstract 是分段 <p>，默认 p 的上下 margin 会显得“空行很大” */
+.cation_item_li .tp_abstract_content p{
+  margin: 0 0 8px !important;
+}
+
+/* Links 里的每条链接：纯色、无左蓝条、无白色小卡片 */
+.cation_item_li .tp_pub_list li{
+  background: transparent !important;  /* 原来 white */
+  border-left: 0 !important;           /* 去掉重复蓝条 */
+  border-radius: 0 !important;         /* 去掉小卡片圆角 */
+  padding: 6px 0 !important;           /* 更像“列表” */
+  margin-bottom: 6px !important;
+}
+/* 如果你还想保留一点分隔感：用细灰线，而不是白盒子 */
+.cation_item_li .tp_pub_list li + li{
+  border-top: 1px solid #e9e9e9 !important;
+  padding-top: 8px !important;
+}
+.cation_item_li .tp_abstract,
+.cation_item_li .tp_links{
+  border-left: 0 !important;
+}
+
+/* ===== Publications search bar ===== */
+.pub_searchbar{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: .25rem 0 .35rem;   /* 控制它和内容的间距 */
+}
+
+#pubSearchInput{
+  flex: 1;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+#pubSearchInput:focus{
+  border-color: #0071c1;
+}
+
+#pubSearchClear{
+  width: 38px;
+  height: 38px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#pubSearchClear:hover{
+  border-color: #0071c1;
+}
+
+/* 搜索栏整体宽度、与下方间距 */
+.pub_searchbar{
+  margin: 90px auto 18px;  /* 上 左右 下 */
+  gap: 12px;
+}
+
+/* 输入框：高度/字号/内边距 */
+#pubSearchInput{
+  height: 60px;         /* 控制整体高度 */
+  font-size: 20px;      /* 输入字号 */
+  padding: 0 14px;      /* 左右内边距 */
+  border-radius: 12px;
+}
+
+/* placeholder 字号/颜色 */
+#pubSearchInput::placeholder{
+  font-size: 20px;
+  color: #999999;
+}
+
+/* 右侧清空按钮：大小/字号 */
+#pubSearchClear{
+  width: 60px;
+  height: 60px;
+  font-size: 30px;      /* × 的大小 */
+  border-radius: 12px;
+  color: #0071c1;
+}
+
+/* 隐藏 type=search 自带的清除按钮（Chrome / Edge / Safari） */
+#pubSearchInput::-webkit-search-cancel-button{
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Firefox 没有这个伪元素，一般不会显示内置×，不用管 */
+
+/* ===== Models page enhancements (A/I series + clickable cards) ===== */
+.modles .item_a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+.modles .item_a:hover{
+    transform: translateY(-0.05rem);
+    box-shadow: 0px 10px 22px rgba(0,0,0,0.15);
+}
+.modles .item_bt{ font-weight: 700; }
+.modles .item_bt2{ font-style: italic; }
+
+.models_section{
+    margin-bottom: .7rem;
+}
+.models_section_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: .22rem 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.models_section_title{
+    font-size: .34rem;
+    font-weight: 700;
+    color: #0071c1;
+}
+.models_section_desc{
+    margin: .16rem 0 .36rem 0;
+    font-size: .20rem;
+    line-height: 1.6;
+    color: #666;
+}
+.models_section_icon{
+    width: .28rem;
+    height: .28rem;
+    position: relative;
+}
+.models_section_icon::before,
+.models_section_icon::after{
+    content: "";
+    position: absolute;
+    background: #333;
+}
+.models_section_icon::before{
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+}
+.models_section_icon::after{
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+    transition: opacity .15s ease;
+}
+/* expanded: show '-' (hide vertical stroke) */
+.models_section.expanded .models_section_icon::after{ opacity: 0; }
+/* collapsed: hide list */
+.models_section.collapsed .models_list{ display: none; }

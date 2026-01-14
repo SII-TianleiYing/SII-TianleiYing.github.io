@@ -16,7 +16,8 @@
 		<script src="skin/js/jquery.countup.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="skin/js/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
-	<body>
+  <body class="home">
+    
 		<div class="header_height"></div>
 		<div class="header">
 			<div class="container_pub">
@@ -27,10 +28,10 @@
 					<ul class="head_menu">
 						<!-- <li class="active"><a href="">网站首页</a></li> -->
 						<li ><a href="Models.html">Models</a></li>
-						<li><a href="">  DataBases </a></li>
+						<li><a href="Databases.html">Databases</a></li>
 						<li><a href="Publications.html">Publications</a></li>
 						<li><a href="People.html">People</a></li>
-						<li><a href="about.html">About</a></li>
+						<li><a href="About.html">About</a></li>
 					
 					</ul>
 					<div class="menu_orther">
@@ -45,54 +46,27 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="index_banner">
-			 <div class="swiper mySwiper">
 
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-		
-		<img src="skin/images/a.png" alt="">
-	
-		<div class="tr">
-				<div class="by2"> 
-Ten years. Billions of dollars. Less than a l0% chance of success.
-		</div>
-		<div class="by1"> 
-We build AI to address this challenge.
-		</div>
-		</div>
-	</div>
- <div class="swiper-slide"><img src="skin/images/a.png" alt="">
-<div class="tr">
-				<div class="by2"> 
-Ten years. Billions of dollars. Less than a l0% chance of success.
-		</div>
-		<div class="by1"> 
-We build AI to address this challenge.
-		</div>
-		</div>
-</div>
-
-  <div class="swiper-slide"><img src="skin/images/a.png" alt="">
-
-<div class="tr">
-				<div class="by2"> 
-Ten years. Billions of dollars. Less than a l0% chance of success.
-		</div>
-		<div class="by1"> 
-We build AI to address this challenge.
-		</div>
-		</div>
-</div>
-
-   
-    </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-	
-	<div class="swiper-pagination"></div>
+    <div class="index_hero">
+  <div class="hero_bg">
+    <img src="skin/images/home.png" alt="Hero image">
   </div>
+
+  <div class="hero_text">
+    <div class="hero_kicker">
+      Ten years. Billions of dollars. Less than a 10% chance of success.
+    </div>
+    <div class="hero_title">
+      We build AI to address this challenge.
+    </div>
+  </div>
+  
+</div>
+
+      <div class="hero_intro">
+Within Ying Lab, we develop deep learning models and an integrated wet–dry experimental closed loop to accelerate antibody therapeutics. <br>We focus on affinity maturation, antibody design and engineering, and the discovery of novel antibodies for challenging targets.
+      </div>
+
 			<div class="container_pub">
 				<div class="bt_pub">
 					Models
@@ -188,9 +162,38 @@ Generative prediction of antibodyconformational ensembles using diffusion models
 			<div class="external-controls">
   <!-- 分页器放在这里 -->
   <div class="external-pagination"></div>
-</div>
-			</div>
-		</div>
+
+  </div>
+        </div>
+      <div class="container_pub">
+    <div class="bt_pub">
+      Databases
+    </div>
+
+    <div class="lbm">
+      <div class="swiper mySwiperDB">
+        <div class="swiper-wrapper">
+          <!-- 这里随便留1个占位 slide（databases.js 会自动清空并填充） -->
+          <div class="swiper-slide">
+            <div class="item">
+              <img src="skin/images/a1.jpg" alt="">
+              <div class="item_bt">Example Database</div>
+              <div class="item_bt2">A short description for testing.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Databases 专用按钮（避免和 Models 冲突） -->
+      <div class="custom-swiper-button-next-db"></div>
+      <div class="custom-swiper-button-prev-db"></div>
+    </div>
+
+    <div class="external-controls">
+      <div class="external-pagination-db"></div>
+    </div>
+  </div>
+
 		<div class="about">
 			<div class="container_pub">
 				<div class="about_nr">
@@ -274,6 +277,211 @@ Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta t
 .custom-swiper-button-next::after {
   margin-left: -4px;
 }
+/* ===== Databases carousel controls (index only) ===== */
+.custom-swiper-button-next-db,
+.custom-swiper-button-prev-db {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.custom-swiper-button-next-db:hover,
+.custom-swiper-button-prev-db:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.custom-swiper-button-next-db { right: 0; }
+.custom-swiper-button-prev-db { left: 0; }
+
+.custom-swiper-button-next-db::after,
+.custom-swiper-button-prev-db::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(45deg);
+}
+
+.custom-swiper-button-prev-db::after {
+  transform: rotate(225deg);
+  margin-right: -4px;
+}
+.custom-swiper-button-next-db::after { margin-left: -4px; }
+
+/* Databases pagination (index only) */
+.external-pagination-db{
+  position: static !important;
+  display: inline-block;
+  width: auto !important;
+}
+.external-pagination-db .swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  background: #ccc;
+  opacity: 1;
+  margin: 0 6px !important;
+}
+.external-pagination-db .swiper-pagination-bullet-active{
+  background: #1F6F73
+}
+/* ===== index only: normalize carousel card size & keep shadow visible ===== */
+.mySwiper1 .swiper-slide,
+.mySwiperDB .swiper-slide{
+  padding: .16rem .12rem;   /* 给阴影留空间，避免被裁 */
+  box-sizing: border-box;
+  overflow: visible;        /* 允许阴影溢出 */
+  display: flex;
+  justify-content: center;  /* 卡片居中 */
+}
+
+.mySwiper1 .item,
+.mySwiperDB .item,
+.mySwiper1 a.item,
+.mySwiperDB a.item{
+  width: 100%;
+  max-width: 6rem;        /* 你要的“最大卡片大小”就在这调 */
+  margin: 0 auto;
+}
+
+/* 图片高度统一，否则不同图片会把卡片顶得很高 */
+.mySwiper1 .item img,
+.mySwiperDB .item img{
+  width: 100%;
+  height: 2.6rem;           /* 这里控制“图片区域高度” */
+  object-fit: contain;      /* 图标/示意图建议 contain；想铺满就改 cover */
+  display: block;
+}
+/* ===== Home hero (index only) ===== */
+body.home .header_height{ display:none; }  /* 去掉顶部空白占位，让大图顶到最上面 */
+
+body.home .header{
+  background: transparent;
+  box-shadow: none;
+}
+body.home .header.scrolled{
+  background: #23797C;   /* 回到你原来的蓝色 */
+  box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+
+/* 导航文字在大图上用白色 */
+body.home .head_menu li a{ color:#fff; }
+body.home .m_menu .headmenu{ background:#fff; } /* 三条杠变白（如果你三条杠是用背景色画的） */
+
+/* Hero 容器 */
+body.home .index_hero{
+  position: relative;
+  height: min(78vh, 700px);
+  min-height: 520px;
+  overflow: hidden;
+}
+
+/* 背景图 */
+body.home .index_hero .hero_bg,
+body.home .index_hero .hero_bg img{
+  width: 100%;
+  height: 100%;
+}
+body.home .index_hero .hero_bg img{
+  object-fit: cover;
+  object-position: 50% 30%; /* 关键：第二个数越大，画面越往下 */
+  display:block;
+}
+
+/* 遮罩：让字更清晰（你想更“高级感”，这个非常关键） */
+body.home .index_hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.15) 40%, rgba(0,0,0,0));
+}
+
+/* 文本层 */
+body.home .index_hero .hero_text{
+  position:absolute;
+  left:0; right:0;
+  top:70%;
+  transform: translateY(-25%);
+  text-align:center;
+  padding: 0 20px;
+  z-index: 2;
+  color:#fff;
+}
+
+/* 两行文字的大小（你也可以按喜好再调） */
+body.home .index_hero .hero_kicker{
+  font-size: 30px;
+  line-height: 1.35;
+  opacity: .95;
+  font-weight: 500;
+  font-style: italic;
+}
+body.home .index_hero .hero_title{
+  margin-top: 14px;
+  font-size: 56px;
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+/* 小屏幕适配 */
+@media (max-width: 980px){
+  body.home .index_hero .hero_kicker{ font-size: 18px; }
+  body.home .index_hero .hero_title{ font-size: 34px; }
+
+  /* 手机展开菜单通常是白底：展开时把文字改深色，避免看不清 */
+  body.home .head_menu.active{ background:#fff; }
+  body.home .head_menu.active li a{ color:#333; }
+}
+.index_hero .hero_kicker,
+.index_hero .hero_title{
+  text-shadow:
+    0 2px 10px #1F6F73,
+    0 0 2px #1F6F73; /* 很轻的描边感 */
+}
+
+/* 同时稍微提高对比 */
+.index_hero .hero_kicker{ color: rgba(255,255,255,.90); }
+.index_hero .hero_title{ color: rgba(255,255,255,.98); }
+
+.hero_intro{
+  margin-top: 80px;
+  margin-bottom: 30px; /* 你想要多少就写多少 */
+
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 25px;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+
+  color: rgba(0, 0, 0, 0.92);
+}
+
+@media (max-width: 980px){
+  .hero_intro{
+    font-size: 16px;
+    line-height: 1.65;
+    margin-top: 10px;
+    max-width: 92vw;
+  }
+}
+
 </style>
         <div class="footer footer_dark">
             <div class="container_pub"></div>
@@ -354,26 +562,8 @@ Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta t
         <script async src="//finicounter.eu.org/finicounter.js"></script>
 
 		<script src="skin/js/swiper-bundle.min.js"></script>
-		
-		
-		
-		 <script>
-    var swiper = new Swiper(".mySwiper", {
-		  autoplay: {
-    delay: 3000,
-    stopOnLastSlide: false,
-    disableOnInteraction: false,
-    },
-		 loop: true,
-		  navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
+    <script src="skin/js/models.js"></script>
+
 <script>
 // 初始化 Swiper，使用外部元素作为分页器
 var swiper = new Swiper('.mySwiper1', {
@@ -421,6 +611,38 @@ var swiper = new Swiper('.mySwiper1', {
   }
 });
 </script>
+
+<script>
+  // Databases carousel
+  var swiperDB = new Swiper('.mySwiperDB', {
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+    loop: true,
+
+    breakpoints: {
+      1200: { slidesPerView: 3, spaceBetween: 40 },
+      768:  { slidesPerView: 2, spaceBetween: 30 },
+      480:  { slidesPerView: 1, spaceBetween: 20 },
+      0:    { slidesPerView: 1, spaceBetween: 10 }
+    },
+
+    navigation: {
+      nextEl: '.custom-swiper-button-next-db',
+      prevEl: '.custom-swiper-button-prev-db'
+    },
+    pagination: {
+      el: '.external-pagination-db',
+      clickable: true,
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active'
+    }
+  });
+</script>
+
+<script src="skin/js/databases.js"></script>
 <script src="skin/js/common.js"></script>
 
 	</body>

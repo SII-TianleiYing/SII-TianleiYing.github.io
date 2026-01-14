@@ -10,7 +10,7 @@ position: absolute;
 width: 100%;
 top: 100%;
 left: 0;
-background: #0071c1;
+background: #23797C;
 
 /* 关键：避免桌面端 flex/间距/边距影响下拉菜单 */
 flex-direction: column;
@@ -91,7 +91,7 @@ display:block;
     width: 100%;
     top: 100%;
     left: 0;
-    background: #0071c1;
+    background: #23797C;
 }
 .menu_orther {
     display: flex;
@@ -251,7 +251,7 @@ align-items: center;
 
 .pelle_bt {
     font-size: .8rem;
-    color: #0071c1;
+    color: #23797C;
     text-align: center;
     font-weight: 600;
     margin-bottom: .8rem;
@@ -304,7 +304,7 @@ text-align: left;
 .me_li_item.me_card_v2 .me_name{
 margin-top: 12px;
 font-size: .7rem;       /* 你原来 .me_li_a 就是 .3rem */
-color: #000;            /* 图2更像黑色；想用蓝色就改回 #0071c1 */
+color: #000;            /* 图2更像黑色；想用蓝色就改回 #23797C */
 font-weight: 700;
 }
 .me_li_item.me_card_v2 .me_role{

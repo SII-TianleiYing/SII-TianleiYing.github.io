@@ -1,6 +1,6 @@
 $(function () {
   var DATA_URL = "data/databases.json";
-  var DEFAULT_GA = "skin/images/models/default.png"; // <-- change if you store the default image elsewhere
+  var DEFAULT_GA = "skin/images/models/default.svg"; // <-- change if you store the default image elsewhere
 
   function escapeHtml(str) {
     return String(str || "")
@@ -25,7 +25,7 @@ $(function () {
       .attr("rel", link ? "noopener" : "");
 
     // Image (with fallback)
-    var DEFAULT_GA = "skin/images/databases/default.png";
+    var DEFAULT_GA = "skin/images/databases/default.svg";
     var src = img ? img : DEFAULT_GA;
 
     var $img = $("<img>")
@@ -52,6 +52,89 @@ $(function () {
     }
 
     return $a;
+  }
+  /* ===== Home (index.html) carousel support ===== */
+
+  function createHomeSlide(item) {
+    var name = escapeHtml(item.name);
+    var abs  = escapeHtml(item.abstract);
+    var img  = String(item.graphical_abstract || "").trim();
+    var link = String(item.links || "").trim();
+
+    var DEFAULT_GA_HOME = "skin/images/databases/default.svg";
+    var src = img ? img : DEFAULT_GA_HOME;
+
+    // <a> makes the whole card clickable (same behavior as Models)
+    var $a = $("<a></a>")
+      .addClass("item")
+      .attr("href", link || "javascript:void(0);")
+      .attr("target", link ? "_blank" : "_self")
+      .attr("rel", link ? "noopener" : "");
+
+    var $img = $("<img>")
+      .attr("src", src)
+      .attr("alt", name ? (name + " graphical abstract") : "Database graphical abstract")
+      .on("error", function () {
+        if (this.src.indexOf(DEFAULT_GA_HOME) === -1) this.src = DEFAULT_GA_HOME;
+      });
+
+    var $title = $("<div></div>").addClass("item_bt").html(name);
+    var $desc  = $("<div></div>").addClass("item_bt2").html(abs);
+
+    $a.append($img, $title, $desc);
+
+    if (!link) {
+      $a.css({ cursor: "default" });
+      $a.on("click", function (e) { e.preventDefault(); });
+    }
+
+    return $("<div></div>").addClass("swiper-slide").append($a);
+  }
+
+  function refreshHomeDBSwiper() {
+    var el = document.querySelector(".mySwiperDB");
+    if (!el || !el.swiper) return;
+
+    var sw = el.swiper;
+    if (sw.params && sw.params.loop) {
+      sw.loopDestroy();
+      sw.update();
+      sw.loopCreate();
+      sw.update();
+    } else {
+      sw.update();
+    }
+  }
+
+  function renderHomeDatabasesCarousel(list) {
+    var $wrapper = $(".mySwiperDB .swiper-wrapper");
+    if (!$wrapper.length) return; // 不在 index.html 就直接跳过（不会影响 Databases.html）
+
+    $wrapper.empty();
+
+    if (!list || !list.length) {
+      // 兜底占位
+      $wrapper.append(
+        $("<div></div>").addClass("swiper-slide").append(
+          $("<div></div>").addClass("item").append(
+            $("<img>").attr("src", "skin/images/databases/default.svg").attr("alt", "Default"),
+            $("<div></div>").addClass("item_bt").text("No databases yet."),
+            $("<div></div>").addClass("item_bt2").text("Please check back soon.")
+          )
+        )
+      );
+      refreshHomeDBSwiper();
+      return;
+    }
+
+    // 可选：只在首页展示前 N 个（比如 8 个）
+    // list = list.slice(0, 8);
+
+    list.forEach(function (d) {
+      $wrapper.append(createHomeSlide(d));
+    });
+
+    refreshHomeDBSwiper();
   }
 
   function renderDatabases(list) {
@@ -109,9 +192,11 @@ $(function () {
   $.getJSON(DATA_URL)
     .done(function (data) {
       renderDatabases(data);
+      renderHomeDatabasesCarousel(data); 
     })
     .fail(function () {
       renderDatabases([]);
+      renderHomeDatabasesCarousel([]);
       if (window.console && console.warn) console.warn("Failed to load:", DATA_URL);
     });
 });

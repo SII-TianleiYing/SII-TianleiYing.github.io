@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biology Innovator 问卷（排序版）</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="title">
+          <h1>Biology Innovator 问卷（网络版）</h1>
+          <p class="subtitle">
+            记名 + 身份选择 + 通用20题 + 子领域20题（组内3维度排序 → 自动Top1 → 组间排序）+ 子领域开放题
+          </p>
+        </div>
+        <div class="header-actions">
+          <button id="btnExportJson" class="btn secondary" type="button">导出 JSON</button>
+          <button id="btnExportCsv" class="btn secondary" type="button">导出 CSV</button>
+          <button id="btnReset" class="btn danger" type="button">重置</button>
+        </div>
+      </header>
+
+      <main id="root" class="root" aria-live="polite"></main>
+
+      <footer class="footer">
+        <div class="footnote">
+          <span>提示：每道排序题要求名次不重复。完成所有必填项后才可提交。</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

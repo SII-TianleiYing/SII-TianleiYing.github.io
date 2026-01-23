@@ -1277,17 +1277,18 @@ function safeName(name) {
 }
 
 // ---------- 同步功能 ----------去除了预检
-function attemptSync(endpoint, payload, retryCount, callback, endpointType = "local") {
-  const apiPath = endpointType === "local" ? "/api/submit" : "";
+function attemptSync(endpoint, payload, retryCount, callback, endpointType = 'local') {
+  const apiPath = endpointType === 'local' ? '/api/submit' : '';
   const fullUrl = endpoint + apiPath;
 
-  const isGoogle = endpointType === "google";
+  const isGoogle = endpointType === 'google';
 
-  const options = isGoogle
+  const fetchOptions = isGoogle
     ? {
         method: "POST",
         mode: "no-cors",
-        // 不要设置 Content-Type: application/json（否则又可能触发预检）
+        // 关键：不加 application/json，避免触发预检；让它成为“简单请求”
+        // body 是字符串时，浏览器通常会用 text/plain;charset=UTF-8
         body: JSON.stringify(payload),
         keepalive: true,
       }
@@ -1298,25 +1299,30 @@ function attemptSync(endpoint, payload, retryCount, callback, endpointType = "lo
         body: JSON.stringify(payload),
       };
 
-  fetch(fullUrl, options)
+  fetch(fullUrl, fetchOptions)
     .then((res) => {
       if (isGoogle) {
-        // no-cors 的响应是 opaque：读不到 status / json
-        callback(true, "已发送到 Google Sheet（no-cors，无法在前端读取回执）", endpointType);
-        return;
+        // no-cors 下无法读取回执；能走到这里说明请求发出并收到了响应（但无法判断服务端是否 500）
+        callback(true, "已发送到 Google（no-cors，无法读取回执）", endpointType);
+        return null;
       }
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json().then((data) => {
-        if (data && data.ok) callback(true, "同步成功", endpointType);
-        else throw new Error("服务器返回错误");
-      });
+      if (res.ok) return res.json();
+      throw new Error(`HTTP ${res.status}`);
+    })
+    .then((data) => {
+      if (isGoogle) return; // 防止二次处理
+      if (data && data.ok) {
+        callback(true, "同步成功", endpointType);
+      } else {
+        throw new Error("服务器返回错误");
+      }
     })
     .catch((err) => {
       console.error(`同步失败 (${endpointType}, 重试 ${retryCount}/${SYNC_RETRY_MAX}):`, err);
       if (retryCount < SYNC_RETRY_MAX) {
-        setTimeout(() => attemptSync(endpoint, payload, retryCount + 1, callback, endpointType),
-          SYNC_RETRY_DELAY * (retryCount + 1)
-        );
+        setTimeout(() => {
+          attemptSync(endpoint, payload, retryCount + 1, callback, endpointType);
+        }, SYNC_RETRY_DELAY * (retryCount + 1));
       } else {
         callback(false, err.message || "网络错误", endpointType);
       }

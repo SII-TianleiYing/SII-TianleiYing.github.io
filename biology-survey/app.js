@@ -1276,43 +1276,53 @@ function safeName(name) {
   return s.replaceAll(/[\\/:*?"<>|\\s]+/g, "_").slice(0, 40);
 }
 
-// ---------- 同步功能 ----------
-function attemptSync(endpoint, payload, retryCount, callback, endpointType = 'local') {
-  // 根据端点类型选择 API 路径
-  const apiPath = endpointType === 'local' ? '/api/submit' : '';
+// ---------- 同步功能 ----------去除了预检
+function attemptSync(endpoint, payload, retryCount, callback, endpointType = "local") {
+  const apiPath = endpointType === "local" ? "/api/submit" : "";
   const fullUrl = endpoint + apiPath;
-  
-  fetch(fullUrl, {
-    method: "POST",
-    mode: "cors",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  })
+
+  const isGoogle = endpointType === "google";
+
+  const options = isGoogle
+    ? {
+        method: "POST",
+        mode: "no-cors",
+        // 不要设置 Content-Type: application/json（否则又可能触发预检）
+        body: JSON.stringify(payload),
+        keepalive: true,
+      }
+    : {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      };
+
+  fetch(fullUrl, options)
     .then((res) => {
-      if (res.ok) {
-        return res.json();
+      if (isGoogle) {
+        // no-cors 的响应是 opaque：读不到 status / json
+        callback(true, "已发送到 Google Sheet（no-cors，无法在前端读取回执）", endpointType);
+        return;
       }
-      throw new Error(`HTTP ${res.status}`);
-    })
-    .then((data) => {
-      if (data && data.ok) {
-        callback(true, "同步成功", endpointType);
-      } else {
-        throw new Error("服务器返回错误");
-      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json().then((data) => {
+        if (data && data.ok) callback(true, "同步成功", endpointType);
+        else throw new Error("服务器返回错误");
+      });
     })
     .catch((err) => {
       console.error(`同步失败 (${endpointType}, 重试 ${retryCount}/${SYNC_RETRY_MAX}):`, err);
       if (retryCount < SYNC_RETRY_MAX) {
-        // 重试
-        setTimeout(() => {
-          attemptSync(endpoint, payload, retryCount + 1, callback, endpointType);
-        }, SYNC_RETRY_DELAY * (retryCount + 1)); // 指数退避
+        setTimeout(() => attemptSync(endpoint, payload, retryCount + 1, callback, endpointType),
+          SYNC_RETRY_DELAY * (retryCount + 1)
+        );
       } else {
         callback(false, err.message || "网络错误", endpointType);
       }
     });
 }
+
 
 // 带自动降级的同步函数
 function attemptSyncWithFallback(endpointConfig, payload, retryCount, callback) {
@@ -1386,7 +1396,7 @@ function checkPendingSync() {
   if (queue.length > 0) {
     console.log(`检测到 ${queue.length} 个待同步项目，开始后台同步...`);
     updateSyncStatus("syncing");
-    startBackgroundSync();
+    startBackgfetchroundSync();
   }
 }
 

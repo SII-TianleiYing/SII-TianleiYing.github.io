@@ -8,7 +8,7 @@
 window.SURVEY_CONFIG = {
   // 局域网服务器地址（例如：http://192.168.1.100:3000）
   // 启动 server.js 后，终端会显示你的局域网 IP
-  LOCAL_SERVER_URL: "http://192.168.191.123:3000",
+  // LOCAL_SERVER_URL: "http://192.168.191.123:3000",
   
   // Google Apps Script Web App URL（备用）
   APPS_SCRIPT_WEBAPP_URL: "https://script.google.com/macros/s/AKfycbyd8O_iLZp2UayRBu2LCtCy4a-KixMVRvHnEYnNt5H8eno-rtOj_0exb5z0YGnnRySF/exec",

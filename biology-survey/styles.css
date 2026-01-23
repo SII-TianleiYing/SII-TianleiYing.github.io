@@ -38,7 +38,15 @@ body{
 }
 .title h1{margin:0 0 6px;font-size:20px;letter-spacing:.2px}
 .subtitle{margin:0;color:var(--muted);font-size:13px;line-height:1.4}
-.header-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.header-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
+.sync-status{
+  width:12px;height:12px;border-radius:50%;display:inline-block;
+  animation:pulse 2s infinite;
+}
+.sync-status.syncing{background:#2b6dff}
+.sync-status.success{background:#1b9f60;animation:none}
+.sync-status.failed{background:#d43a57;animation:none}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 .btn{
   appearance:none;border:1px solid var(--border);
   background: rgba(255,255,255,.92);
@@ -185,14 +193,29 @@ body{
   color:var(--text);
   padding:8px 10px;
   border-radius:10px;
+  font-size:14px;
 }
+.qbody{display:block;margin-top:4px}
 @media (max-width: 980px){
   .table-row{grid-template-columns: 1fr}
-  .cell{border-left:none;border-top:1px solid var(--border)}
+  .cell{border-left:none;border-top:1px solid var(--border);padding:14px 12px}
   .cell:first-child{border-top:none}
-  .cell-d{justify-content:flex-start}
-  .cell-d select{max-width:140px}
+  .cell-q{flex-direction:column;align-items:flex-start;gap:10px}
+  .cell-q .qid{margin-bottom:4px}
+  .cell-d{justify-content:flex-start;padding-top:10px;padding-bottom:10px}
+  .cell-d select{max-width:160px;width:100%;font-size:15px;padding:10px 12px}
+  .table-head .cell{font-size:13px;padding:12px;font-weight:600}
+  .table-head .cell:first-child{border-top:none}
 }
 
 .grid3{display:grid;grid-template-columns: 1fr 1fr 1fr;gap:12px}
 @media (max-width: 980px){.grid3{grid-template-columns:1fr}}
+
+/* 手机端优化 */
+@media (max-width: 640px){
+  .header{flex-direction:column;gap:12px}
+  .header-actions{width:100%;justify-content:stretch}
+  .header-actions .btn{flex:1;min-width:0;font-size:12px;padding:10px 8px}
+  .title h1{font-size:18px}
+  .subtitle{font-size:12px}
+}

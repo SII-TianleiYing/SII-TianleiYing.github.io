@@ -124,26 +124,26 @@ const DATA = {
       key: "immunology",
       name: "子领域4：相关免疫学机制（81–100）",
       questions: [
-        { id: 81, text: "免疫原性的预判逻辑： 为什么具有相同一级序列的抗体，在不同表达宿主下会表现出截然不同的抗药物抗体（ADA）诱导率？" },
-        { id: 82, text: "细胞因子风暴（CRS）的分子阈值： 多特异性抗体触发 CRS 的物理触发点（如突触拉近距离）在哪里？" },
-        { id: 83, text: "肿瘤微环境（TME）的动态逆转： 大分子药如何通过调节局部代谢物（如乳酸），将“冷肿瘤”永久性转变为“热肿瘤”？" },
-        { id: 84, text: "Fc 受体功能组学的差异： 不同亚型 FcγR 在不同组织中的分布如何精确调控抗体的效应功能（ADCC/ADCP）？" },
-        { id: 85, text: "长效免疫记忆的诱导： 治疗性单抗能否通过特殊的 Fc 改建，诱导机体产生针对肿瘤抗原的内源性疫苗效应？" },
-        { id: 86, text: "T 细胞耗竭的表观遗传学逆转： 大分子药物干预后，已经处于“终末耗竭”状态的免疫细胞是否真的能恢复杀伤力？" },
-        { id: 87, text: "补体激活的负反馈机制： 大分子药诱发的补体介导类过敏反应（CARPA）能否通过分子设计提前干预？" },
-        { id: 88, text: "肠道微生物与大分子药效： 肠道菌群产生的代谢产物如何通过系统循环，影响远端器官大分子药的药代动力学？" },
-        { id: 89, text: "自身免疫平衡的精准调控： 如何设计免疫检查点抑制剂，使其仅在肿瘤部位激活免疫，而在正常组织维持耐受？" },
-        { id: 90, text: "抗体依赖性增强（ADE）效应的阻断： 在抗病毒大分子药开发中，如何从结构上彻底规避亚中和浓度下的病毒感染增强？" },
-        { id: 91, text: "三级淋巴结构（TLS）的药物诱导： 如何通过大分子药在肿瘤内诱导出功能性的 TLS 以提高局部抗体产量？" },
-        { id: 92, text: "性别差异对免疫响应的影响： 为什么女性对某些生物药的 ADA 发生率显著高于男性？其分子基础是什么？" },
-        { id: 93, text: "交叉呈递路径的优化： 如何设计大分子抗原，使其高效进入树突状细胞的 MHC-I 类分子呈递路径？" },
-        { id: 94, text: "炎症小体对纳米药物的识别： 递送载体本身是否会激活胞内 NLRP3 炎症小体从而干扰治疗效果？" },
-        { id: 95, text: "巨噬细胞极化的动态控制： 如何通过多特异性大分子精准引导 M2 型巨噬细胞向 M1 型的重编程？" },
-        { id: 96, text: "免疫衰老对大分子代谢的影响： 老年患者由于免疫细胞功能减退，对生物药的清除速率与年轻人群有何本质区别？" },
-        { id: 97, text: "抗体糖型对先天免疫的精细调控： 特定糖基（如岩藻糖）缺失如何改变抗体与 NK 细胞的瞬时结合动力学？" },
-        { id: 98, text: "自身抗体诱导的分子模拟： 某些大分子药意外诱发系统性红斑狼疮等自身免疫现象的分子触发链是什么？" },
-        { id: 99, text: "多靶点药物的免疫突触重塑： 同时结合多个靶点的大分子如何改变免疫突触的空间拓扑结构，进而影响信号传递强度？" },
-        { id: 100, text: "免疫耐受诱导的新策略： 针对自身免疫病，如何设计药物以诱导针对特定抗原的抗原特异性 Treg 细胞扩增？" },
+        { id: 81, text: "免疫突触的机械信号转导： TCR 与抗原肽结合时产生的皮牛级（$pN$）物理拉力，如何跨越细胞膜转化为驱动细胞骨架重排的生化信号？" },
+        { id: 82, text: "抗原密度的空间协同效应： 肿瘤细胞表面抗原从“弥散分布”转变为“局部簇集”时，触发 T 细胞全效激活的密度阈值如何发生非线性改变？" },
+        { id: 83, text: "胞外囊泡的远端免疫重塑： 肿瘤来源的微囊泡如何通过携带特定的代谢酶，在尚未发生转移的远端器官中预先构建“免疫抑制生态位”？" },
+        { id: 84, text: "血脑屏障的受体转运极性： 大分子药通过受体介导的胞吞穿过 BBB 时，内皮细胞的炎症极化状态如何决定药物的“捕获-通过”分配比率？" },
+        { id: 85, text: "训练免疫的跨代遗传机制： 先天免疫细胞受到的表观遗传重塑，是否能通过骨髓中的造血干细胞（HSC）长期维持并遗传给所有骨髓系后代？" },
+        { id: 86, text: "细胞因子信号的偏向性拆解： 如何通过改造 $IL-2$ 的分子构型，使其在保持对效应 T 细胞激活的同时，物理性地阻断其与 Treg 高亲和力受体的结合？" },
+        { id: 87, text: "间质流体压力的渗透极限： 肿瘤核心区的高固相压力如何通过改变大分子药物的扩散系数（$D$），在空间上形成免疫治疗的“药力真空区”？" },
+        { id: 88, text: "抗原交叉呈递的速率匹配： 外源抗原从内体逃逸到胞质的速度常数，如何精准匹配 $\\text{MHC-I}$ 类分子在内质网中的肽段装载窗口期？" },
+        { id: 89, text: "免疫响应的时间节律门控： 细胞内部生物钟基因对线粒体氧化磷酸化的波动调节，如何决定了免疫检查点抑制剂在不同给药时间点的药效差异？" },
+        { id: 90, text: "蛋白质冠的免疫原性屏蔽： 在体液循环中瞬时吸附在药物表面的血浆蛋白层，究竟是增强了药物的“隐身性”，还是成为了激活补体系统的“引信”？" },
+        { id: 91, text: "组织驻留记忆细胞的代谢偏好： 长期驻留在缺氧黏膜组织的 TRM 细胞，是如何切换底物利用策略以维持长达数年的高灵敏度免疫监控的？" },
+        { id: 92, text: "检查点表达的随机涨落效应： 肿瘤克隆间 $PD-L1$ 表达的随机噪声（Stochastic Noise），如何在群体水平上通过信号互补导致整体对单抗药物的耐受？" },
+        { id: 93, text: "核酸传感器的信号叠加逻辑： 递送系统诱发的内源性 $mtDNA$ 泄露，与药物载荷触发的 cGAS-STING 通路之间是否存在非线性的加和或拮抗？" },
+        { id: 94, text: "神经突触的免疫剪裁动力学： 在慢性神经炎症中，补体系统 $C1q$ 在突触上的异常沉积，是如何诱导小胶质细胞进行非特异性吞噬并导致认知损伤的？" },
+        { id: 95, text: "原位 B 细胞的类别转换诱导： 肠道菌群产生的特定次级代谢产物，如何作为生化开关直接在肠道黏膜内诱导 $IgA$ 的类别转换而非全身性免疫响应？" },
+        { id: 96, text: "炎性衰老对药物清除的干扰： 老年个体体内持续的高水平促炎因子，是否通过竞争性占据单核-巨噬系统的清除受体，非线性地延长了大分子药的半衰期？" },
+        { id: 97, text: "多靶点药物的亲和力配比逻辑： 在双特异性抗体设计中，高亲和力端与低亲和力端的比例如何设定，才能实现对肿瘤细胞的最优“亲和力驱动”选择性？" },
+        { id: 98, text: "溶酶体碱化的抗原表位重塑： 药物载体引起的胞内溶酶体 $pH$ 变化，如何通过改变蛋白酶的切割特异性，产生出逃避免疫监控的“异常剪接肽段”？" },
+        { id: 99, text: "氧气梯度对效应功能的锁死： 深度缺氧环境如何通过调节 NK 细胞的离子泵活性，导致 $\\text{ADCC}$ 效应在颗粒释放阶段发生机械性中断？" },
+        { id: 100, text: "合成免疫记忆的逻辑锁定： 能否设计一种响应特定代谢信号的人工转录开关，在 T 细胞初次激活后将其染色质状态锁定在“长效中心记忆”态？" },
       ],
     },
   ],
@@ -166,6 +166,10 @@ function buildDomain(domainKey) {
 
 // ---------- 存储 ----------
 const STORAGE_KEY = "bio_innovator_survey_v1";
+const SYNC_QUEUE_KEY = "bio_innovator_sync_queue_v1";
+const SYNC_RETRY_MAX = 3; // 最大重试次数
+const SYNC_RETRY_DELAY = 2000; // 重试延迟（毫秒）
+
 function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -177,6 +181,57 @@ function loadState() {
 }
 function saveState(state) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+// 同步状态指示器
+function updateSyncStatus(status) {
+  const el = document.getElementById("syncStatus");
+  if (!el) return;
+  el.className = `sync-status ${status}`;
+  el.style.display = "block";
+  if (status === "syncing") {
+    el.title = "正在同步到 Google Sheet...";
+  } else if (status === "success") {
+    el.title = "已成功同步到 Google Sheet";
+    setTimeout(() => {
+      el.style.display = "none";
+    }, 3000);
+  } else if (status === "failed") {
+    el.title = "同步失败，将在后台自动重试";
+  }
+}
+
+// 同步队列管理（用于离线重试）
+function loadSyncQueue() {
+  try {
+    const raw = localStorage.getItem(SYNC_QUEUE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+function saveSyncQueue(queue) {
+  localStorage.setItem(SYNC_QUEUE_KEY, JSON.stringify(queue));
+  // 更新同步状态指示器
+  if (queue.length > 0) {
+    updateSyncStatus("syncing");
+  } else {
+    updateSyncStatus("success");
+  }
+}
+function addToSyncQueue(payload) {
+  const queue = loadSyncQueue();
+  queue.push({
+    payload,
+    timestamp: new Date().toISOString(),
+    retryCount: 0,
+  });
+  saveSyncQueue(queue);
+}
+function removeFromSyncQueue(index) {
+  const queue = loadSyncQueue();
+  queue.splice(index, 1);
+  saveSyncQueue(queue);
 }
 
 // ---------- 状态结构 ----------
@@ -200,9 +255,31 @@ function makeInitialState() {
 
 let STATE = loadState() || makeInitialState();
 
+function getLocalServerUrl() {
+  const url = (window.SURVEY_CONFIG && window.SURVEY_CONFIG.LOCAL_SERVER_URL) ? String(window.SURVEY_CONFIG.LOCAL_SERVER_URL) : "";
+  return url.trim();
+}
+
 function getAppsScriptUrl() {
   const url = (window.SURVEY_CONFIG && window.SURVEY_CONFIG.APPS_SCRIPT_WEBAPP_URL) ? String(window.SURVEY_CONFIG.APPS_SCRIPT_WEBAPP_URL) : "";
   return url.trim();
+}
+
+// 获取可用的同步端点（优先局域网，失败时降级到 Google Sheet）
+function getSyncEndpoint() {
+  const local = getLocalServerUrl();
+  const google = getAppsScriptUrl();
+  
+  if (local) {
+    // 如果有局域网服务器，优先使用（但需要检查是否可用）
+    return { url: local, type: 'local', fallback: google || null };
+  }
+  
+  if (google) {
+    return { url: google, type: 'google', fallback: null };
+  }
+  
+  return null;
 }
 
 // ---------- 页面定义 ----------
@@ -316,9 +393,80 @@ function download(filename, text) {
   a.href = url;
   a.download = filename;
   document.body.appendChild(a);
-  a.click();
+  
+  // 检测是否为移动设备（特别是 iOS）
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  
+  if (isIOS) {
+    // iOS Safari 不支持直接下载，在新窗口打开内容，用户可以手动保存
+    const newWindow = window.open();
+    if (newWindow) {
+      newWindow.document.write(`
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <title>${filename}</title>
+            <style>
+              body { font-family: monospace; padding: 20px; white-space: pre-wrap; word-break: break-all; }
+              .hint { background: #f0f0f0; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+            </style>
+          </head>
+          <body>
+            <div class="hint">📱 iOS 设备提示：长按页面内容，选择"拷贝"或"分享"来保存文件</div>
+            ${text.replace(/</g, "&lt;").replace(/>/g, "&gt;")}
+          </body>
+        </html>
+      `);
+      newWindow.document.close();
+      alert("文件已在新窗口打开。请长按页面内容，选择“拷贝”或“分享”来保存文件。");
+    } else {
+      // 如果弹窗被阻止，尝试复制到剪贴板
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert(`文件内容已复制到剪贴板。文件名：${filename}\n\n你可以在备忘录或其他应用中粘贴保存。`);
+        }).catch(() => {
+          // 降级方案：显示内容让用户手动复制
+          const textarea = document.createElement("textarea");
+          textarea.value = text;
+          textarea.style.position = "fixed";
+          textarea.style.opacity = "0";
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand("copy");
+            alert(`文件内容已复制到剪贴板。文件名：${filename}\n\n你可以在备忘录或其他应用中粘贴保存。`);
+          } catch (e) {
+            alert(`无法自动下载文件。文件名：${filename}\n\n请手动复制以下内容：\n\n${text.substring(0, 200)}...`);
+          }
+          document.body.removeChild(textarea);
+        });
+      }
+    }
+  } else {
+    // Android 和其他设备：尝试直接下载
+    try {
+      a.click();
+      if (isMobile) {
+        // 移动设备可能需要一点延迟
+        setTimeout(() => {
+          URL.revokeObjectURL(url);
+        }, 100);
+      } else {
+        URL.revokeObjectURL(url);
+      }
+    } catch (e) {
+      // 如果下载失败，尝试在新窗口打开
+      const newWindow = window.open(url, "_blank");
+      if (newWindow) {
+        alert("文件已在新窗口打开。如果未自动下载，请右键点击页面选择“另存为”。");
+      } else {
+        alert("无法下载文件。请检查浏览器设置或尝试使用桌面浏览器。");
+      }
+    }
+  }
+  
   a.remove();
-  URL.revokeObjectURL(url);
 }
 
 // ---------- 导出 ----------
@@ -387,6 +535,7 @@ function csvEscape(s) {
 const root = document.getElementById("root");
 
 function render() {
+  // 先保存状态，确保数据不丢失
   saveState(STATE);
   root.innerHTML = "";
 
@@ -396,6 +545,9 @@ function render() {
 
   const step = steps[STATE.ui.step];
   root.appendChild(renderStep(step, STATE.ui.step, steps.length));
+  
+  // 渲染后再次保存，确保DOM更新后的状态也被保存
+  saveState(STATE);
 }
 
 function persistOnly() {
@@ -414,12 +566,37 @@ function renderStep(step, stepIndex, stepCount) {
   return el("div", { class: "card" }, [el("h2", {}, ["未知页面"]), el("p", { class: "desc" }, ["请刷新或重置问卷。"])]);
 }
 
-function navBar(stepIndex, stepCount, { canNext = true, onNext, onPrev, nextLabel = "下一步" } = {}) {
-  const left = el("div", { class: "progress" }, [`进度：${stepIndex + 1}/${stepCount}`]);
-  const right = el("div", { class: "nav" }, [
+function navBar(stepIndex, stepCount, { canNext = true, onNext, onPrev, nextLabel = "下一步", showBackToLast = false } = {}) {
+  // 如果stepCount不确定（比如基本信息页还没选子领域），显示预估总数
+  const displayCount = stepCount > 0 ? stepCount : (STATE.meta.subfield ? 14 : 14);
+  const left = el("div", { class: "progress" }, [`进度：${stepIndex + 1}/${displayCount}`]);
+  
+  const buttons = [
     el("button", { class: "btn secondary", type: "button", onClick: onPrev, disabled: stepIndex === 0 ? "true" : null }, ["上一步"]),
     el("button", { class: "btn primary", type: "button", onClick: onNext, disabled: canNext ? null : "true" }, [nextLabel]),
-  ]);
+  ];
+  
+  // 如果不是最后一步，且showBackToLast为true，添加"最后一页"按钮（放在最右边）
+  if (showBackToLast && stepIndex < stepCount - 1) {
+    const allSteps = getAllSteps();
+    const lastStepIndex = allSteps.length - 1;
+    // 检查是否已完成所有必填项（才能跳转到最后一页）
+    const need = checkCompletion();
+    const canGoToLast = need.length === 0;
+    
+    buttons.push(el("button", {
+      class: "btn secondary",
+      type: "button",
+      onClick: () => {
+        STATE.ui.step = lastStepIndex;
+        saveState(STATE);
+        render();
+      },
+      disabled: canGoToLast ? null : "true",
+    }, ["最后一页"]));
+  }
+  
+  const right = el("div", { class: "nav" }, buttons);
   return el("div", { class: "nav" }, [left, right]);
 }
 
@@ -438,7 +615,7 @@ function renderIntro(stepIndex, stepCount) {
     STATE.ui.step++;
     render();
   };
-  return el("div", {}, [card, navBar(stepIndex, stepCount, { onPrev: () => {}, onNext })]);
+  return el("div", {}, [card, navBar(stepIndex, stepCount, { onPrev: () => {}, onNext, showBackToLast: true })]);
 }
 
 function renderMeta(stepIndex, stepCount) {
@@ -448,64 +625,81 @@ function renderMeta(stepIndex, stepCount) {
     el("div", { class: "grid2" }, [
       el("div", { class: "field" }, [
         el("div", { class: "label" }, ["姓名（必填）"]),
-        el("input", {
-          class: "input",
-          value: STATE.meta.name,
-          placeholder: "例如：张三",
-          onInput: (e) => {
-            STATE.meta.name = e.target.value.trimStart();
-            persistOnly();
-          },
-        }),
+        (() => {
+          const inp = el("input", {
+            class: "input",
+            placeholder: "例如：张三",
+            onInput: (e) => {
+              STATE.meta.name = e.target.value.trimStart();
+              persistOnly();
+            },
+          });
+          // 确保value正确设置
+          inp.value = STATE.meta.name || "";
+          return inp;
+        })(),
       ]),
       el("div", { class: "field" }, [
         el("div", { class: "label" }, ["身份类型（必选）"]),
-        el(
-          "select",
-          {
-            class: "select",
-            value: STATE.meta.identity,
-            onChange: (e) => {
-              STATE.meta.identity = e.target.value;
-              persistOnly();
+        (() => {
+          const sel = el(
+            "select",
+            {
+              class: "select",
+              onChange: (e) => {
+                STATE.meta.identity = e.target.value;
+                persistOnly();
+                // 立即更新select的显示值
+                sel.value = STATE.meta.identity;
+              },
             },
-          },
-          [
-            option("", "请选择…", true),
-            option("本科生", "本科生"),
-            option("低年级研究生", "低年级研究生"),
-            option("高年级研究生", "高年级研究生"),
-            option("博士后", "博士后"),
-            option("教授/PI", "教授/PI"),
-          ]
-        ),
+            [
+              option("", "请选择…", true),
+              option("本科生", "本科生"),
+              option("低年级研究生", "低年级研究生"),
+              option("高年级研究生", "高年级研究生"),
+              option("博士后", "博士后"),
+              option("教授/PI", "教授/PI"),
+            ]
+          );
+          // 确保value正确设置
+          sel.value = STATE.meta.identity || "";
+          return sel;
+        })(),
       ]),
     ]),
     el("div", { class: "field", style: "margin-top:12px" }, [
       el("div", { class: "label" }, ["选择子领域（必选）"]),
-      el(
-        "select",
-        {
-          class: "select",
-          value: STATE.meta.subfield,
-          onChange: (e) => {
-            const next = e.target.value;
-            // 切换子领域时，保留通用部分，清空子领域相关rank/组间top与开放题（避免混淆）
-            STATE.meta.subfield = next;
-            pruneStateForSubfieldSwitch(next);
-            render();
+      (() => {
+        const sel = el(
+          "select",
+          {
+            class: "select",
+            onChange: (e) => {
+              const next = e.target.value;
+              // 切换子领域时，保留通用部分，清空子领域相关rank/组间top与开放题（避免混淆）
+              STATE.meta.subfield = next;
+              persistOnly();
+              pruneStateForSubfieldSwitch(next);
+              // 确保select显示值更新
+              sel.value = next;
+              render();
+            },
           },
-        },
-        [
-          option("", "请选择…", true),
-          ...DATA.subfields.map((s) => option(s.key, s.name)),
-        ]
-      ),
+          [
+            option("", "请选择…", true),
+            ...DATA.subfields.map((s) => option(s.key, s.name)),
+          ]
+        );
+        // 确保value正确设置
+        sel.value = STATE.meta.subfield || "";
+        return sel;
+      })(),
       el("div", { class: "hint" }, ["提示：若你之后切换子领域，本问卷会清空“子领域部分”的排序结果以避免混淆。"]),
     ]),
   ]);
 
-  const canNext = Boolean(STATE.meta.name.trim()) && Boolean(STATE.meta.identity) && Boolean(STATE.meta.subfield);
+  const canNext = Boolean(STATE.meta.name && STATE.meta.name.trim()) && Boolean(STATE.meta.identity && STATE.meta.identity.trim()) && Boolean(STATE.meta.subfield && STATE.meta.subfield.trim());
   const onPrev = () => {
     STATE.ui.step--;
     render();
@@ -520,7 +714,7 @@ function renderMeta(stepIndex, stepCount) {
     render();
   };
 
-  return el("div", {}, [card, navBar(stepIndex, stepCount, { canNext: true, onPrev, onNext })]);
+  return el("div", {}, [card, navBar(stepIndex, stepCount, { canNext: true, onPrev, onNext, showBackToLast: true })]);
 }
 
 function pruneStateForSubfieldSwitch(nextSubfield) {
@@ -532,6 +726,8 @@ function pruneStateForSubfieldSwitch(nextSubfield) {
   STATE.open = { q1: "", q2: "", q3: "" };
   // 清空finishedAt
   STATE.meta.finishedAt = null;
+  // 重置步骤索引到基本信息页（避免切换子领域后步骤索引错乱）
+  STATE.ui.step = 1; // 基本信息页是 step 1（step 0 是 intro）
   // 若nextSubfield为空则不做更多
   if (!nextSubfield) return;
 }
@@ -583,18 +779,31 @@ function renderGroupRanking(step, stepIndex, stepCount) {
     ? el("div", { class: "ok" }, ["本页已完成，可以进入下一页。"])
     : el("div", { class: "error" }, [validation.msg]);
 
-  return el("div", {}, [card, msgBox, navBar(stepIndex, stepCount, { canNext: true, onPrev, onNext })]);
+  return el("div", {}, [card, msgBox, navBar(stepIndex, stepCount, { canNext: true, onPrev, onNext, showBackToLast: true })]);
 }
 
-function rankSelect({ value, n, onChange }) {
-  return el(
+function rankSelect({ value, n, onChange, domainKey, groupIndex, dimKey, questionId }) {
+  const sel = el(
     "select",
     {
-      value: value === "" ? "" : String(value),
-      onChange,
+      onChange: (e) => {
+        const newVal = e.target.value === "" ? "" : Number(e.target.value);
+        if (onChange) onChange(e);
+        // 如果修改了组内排序，清除对应的组间Top1排序（让用户重新排序）
+        if (domainKey && groupIndex !== undefined && dimKey && questionId !== undefined) {
+          if (STATE.interTopRanks[domainKey] && STATE.interTopRanks[domainKey][dimKey]) {
+            // 清除该维度的组间排序，因为Top1可能已经改变
+            STATE.interTopRanks[domainKey][dimKey] = [];
+            persistOnly();
+          }
+        }
+      },
     },
     [option("", "—", false), ...Array.from({ length: n }, (_, i) => option(String(i + 1), String(i + 1)))]
   );
+  // 确保value正确设置
+  sel.value = value === "" ? "" : String(value);
+  return sel;
 }
 
 function renderTripleColumnRankingTable(domainKey, groupIndex, questions) {
@@ -620,6 +829,10 @@ function renderTripleColumnRankingTable(domainKey, groupIndex, questions) {
         rankSelect({
           value: rm1[q.id] ?? "",
           n,
+          domainKey,
+          groupIndex,
+          dimKey: "innovation",
+          questionId: q.id,
           onChange: (e) => {
             rm1[q.id] = e.target.value === "" ? "" : Number(e.target.value);
             persistOnly();
@@ -630,6 +843,10 @@ function renderTripleColumnRankingTable(domainKey, groupIndex, questions) {
         rankSelect({
           value: rm2[q.id] ?? "",
           n,
+          domainKey,
+          groupIndex,
+          dimKey: "feasibility",
+          questionId: q.id,
           onChange: (e) => {
             rm2[q.id] = e.target.value === "" ? "" : Number(e.target.value);
             persistOnly();
@@ -640,6 +857,10 @@ function renderTripleColumnRankingTable(domainKey, groupIndex, questions) {
         rankSelect({
           value: rm3[q.id] ?? "",
           n,
+          domainKey,
+          groupIndex,
+          dimKey: "value",
+          questionId: q.id,
           onChange: (e) => {
             rm3[q.id] = e.target.value === "" ? "" : Number(e.target.value);
             persistOnly();
@@ -682,7 +903,7 @@ function renderInterTop(step, stepIndex, stepCount) {
 
   if (precheck.length) {
     card.appendChild(el("div", { class: "error" }, [precheck.join("；")]));
-    return el("div", {}, [card, navBar(stepIndex, stepCount, { canNext: false, onPrev: () => { STATE.ui.step--; render(); }, onNext: () => {} })]);
+    return el("div", {}, [card, navBar(stepIndex, stepCount, { canNext: false, onPrev: () => { STATE.ui.step--; render(); }, onNext: () => {}, showBackToLast: true })]);
   }
 
   // 三个维度并排显示（每列对应一个维度；候选题按该维度自动Top1生成）
@@ -706,7 +927,7 @@ function renderInterTop(step, stepIndex, stepCount) {
     render();
   };
 
-  return el("div", {}, [card, msgBox, navBar(stepIndex, stepCount, { canNext: true, onPrev, onNext })]);
+  return el("div", {}, [card, msgBox, navBar(stepIndex, stepCount, { canNext: true, onPrev, onNext, showBackToLast: true })]);
 }
 
 function renderInterTopForDim(domainKey, dom, dim) {
@@ -717,10 +938,17 @@ function renderInterTopForDim(domainKey, dom, dim) {
   }
 
   // 初始化 interTopRanks
-  if (!STATE.interTopRanks[domainKey][dim.key]) {
+  // 检查Top1候选题是否发生变化（如果用户修改了组内排序，Top1可能改变）
+  const oldRanks = STATE.interTopRanks[domainKey][dim.key] || [];
+  const oldQids = new Set(oldRanks.map((x) => x.qid));
+  const newQids = new Set(candidates.map((c) => c.qid));
+  const top1Changed = oldQids.size !== newQids.size || !candidates.every((c) => oldQids.has(c.qid));
+  
+  if (!STATE.interTopRanks[domainKey][dim.key] || top1Changed) {
+    // 如果Top1发生变化，清空之前的排序，让用户重新排序
     STATE.interTopRanks[domainKey][dim.key] = candidates.map((c) => ({ qid: c.qid, rank: "" }));
   } else {
-    // 若候选变化（理论上不会，除非用户回去改了组内排序），则同步更新qid并保留rank（若还匹配）
+    // 若候选没变化，保留之前的rank
     const old = STATE.interTopRanks[domainKey][dim.key];
     const next = candidates.map((c) => {
       const found = old.find((x) => x.qid === c.qid);
@@ -744,7 +972,6 @@ function renderInterTopForDim(domainKey, dom, dim) {
       const select = el(
         "select",
         {
-          value: String(item.rank ?? ""),
           onChange: (e) => {
             item.rank = e.target.value === "" ? "" : Number(e.target.value);
             persistOnly();
@@ -752,6 +979,8 @@ function renderInterTopForDim(domainKey, dom, dim) {
         },
         [option("", "—", false), ...Array.from({ length: n }, (_, i) => option(String(i + 1), String(i + 1)))]
       );
+      // 确保value正确设置
+      select.value = String(item.rank ?? "");
       return el("div", { class: "rank-item" }, [
         el("div", { class: "rank-text" }, [el("span", { class: "qid" }, [`Q${q.id}`]), el("span", { class: "qbody" }, [q.text])]),
         el("div", { class: "rank-controls" }, [select]),
@@ -801,39 +1030,48 @@ function renderOpen(stepIndex, stepCount) {
     ]),
     el("div", { class: "field" }, [
       el("div", { class: "label" }, ["问题1（必填）"]),
-      el("textarea", {
-        class: "textarea",
-        value: STATE.open.q1,
-        placeholder: "请描述你的科研问题1…",
-        onInput: (e) => {
-          STATE.open.q1 = e.target.value;
-          persistOnly();
-        },
-      }),
+      (() => {
+        const ta = el("textarea", {
+          class: "textarea",
+          placeholder: "请描述你的科研问题1…",
+          onInput: (e) => {
+            STATE.open.q1 = e.target.value;
+            persistOnly();
+          },
+        });
+        ta.value = STATE.open.q1 || "";
+        return ta;
+      })(),
     ]),
     el("div", { class: "field", style: "margin-top:12px" }, [
       el("div", { class: "label" }, ["问题2（可选）"]),
-      el("textarea", {
-        class: "textarea",
-        value: STATE.open.q2,
-        placeholder: "可选…",
-        onInput: (e) => {
-          STATE.open.q2 = e.target.value;
-          persistOnly();
-        },
-      }),
+      (() => {
+        const ta = el("textarea", {
+          class: "textarea",
+          placeholder: "可选…",
+          onInput: (e) => {
+            STATE.open.q2 = e.target.value;
+            persistOnly();
+          },
+        });
+        ta.value = STATE.open.q2 || "";
+        return ta;
+      })(),
     ]),
     el("div", { class: "field", style: "margin-top:12px" }, [
       el("div", { class: "label" }, ["问题3（可选）"]),
-      el("textarea", {
-        class: "textarea",
-        value: STATE.open.q3,
-        placeholder: "可选…",
-        onInput: (e) => {
-          STATE.open.q3 = e.target.value;
-          persistOnly();
-        },
-      }),
+      (() => {
+        const ta = el("textarea", {
+          class: "textarea",
+          placeholder: "可选…",
+          onInput: (e) => {
+            STATE.open.q3 = e.target.value;
+            persistOnly();
+          },
+        });
+        ta.value = STATE.open.q3 || "";
+        return ta;
+      })(),
     ]),
   ]);
 
@@ -860,6 +1098,7 @@ function renderOpen(stepIndex, stepCount) {
         STATE.ui.step++;
         render();
       },
+      showBackToLast: true,
     }),
   ]);
 }
@@ -895,35 +1134,46 @@ function renderReview(stepIndex, stepCount) {
   const onSubmit = () => {
     if (!canSubmit) return;
 
-    // 1) 本地先标记完成
+    // 1) 本地先标记完成并保存（确保数据不丢失）
     STATE.meta.finishedAt = new Date().toISOString();
     saveState(STATE);
-
-    // 2) 如配置了 Apps Script，则尝试上报（GitHub Pages 跨域下无法可靠读取响应，因此用 no-cors 方式“尽力而为”）
-    const endpoint = getAppsScriptUrl();
-    if (endpoint) {
-      const payload = buildExportJson();
-      fetch(endpoint, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      })
-        .then(() => {
-          // no-cors 下 response 读取不到；只要 fetch 不抛异常，基本视为已发送
-          render();
-          alert("已提交完成，并已尝试同步到 Google Sheet（请到管理员页面确认是否入库）。");
-        })
-        .catch((err) => {
-          console.error(err);
-          render();
-          alert("已提交完成，但同步到 Google Sheet 失败（网络或URL问题）。你仍可导出JSON/CSV作为备份。");
-        });
+    
+    // 2) 立即显示成功提示，告知数据已保存
+    const payload = buildExportJson();
+    const jsonStr = JSON.stringify(payload, null, 2);
+    
+    // 3) 尝试同步到服务器（优先局域网，失败时降级到 Google Sheet）
+    const endpointConfig = getSyncEndpoint();
+    if (endpointConfig) {
+      // 先显示成功提示（数据已保存在本地）
+      render();
+      const serverName = endpointConfig.type === 'local' ? '局域网服务器' : 'Google Sheet';
+      alert(`✅ 提交成功！\n\n你的问卷数据已保存在浏览器本地存储中，不会丢失。\n\n正在尝试同步到 ${serverName}...`);
+      
+      // 更新同步状态
+      updateSyncStatus("syncing");
+      
+      // 尝试同步（带重试机制和自动降级）
+      attemptSyncWithFallback(endpointConfig, payload, 0, (success, message, usedEndpoint) => {
+        if (success) {
+          updateSyncStatus("success");
+          const serverName = usedEndpoint === 'local' ? '局域网服务器' : 'Google Sheet';
+          alert(`✅ 提交成功！\n\n✓ 数据已保存在本地\n✓ 已成功同步到 ${serverName}\n\n建议：你也可以点击右上角“导出 JSON”或“导出 CSV”保存一份本地备份。`);
+        } else {
+          // 同步失败，加入队列稍后重试
+          addToSyncQueue(payload);
+          updateSyncStatus("failed");
+          alert(`✅ 提交成功！\n\n✓ 数据已保存在浏览器本地存储中\n⚠ 同步失败：${message}\n\n系统会在后台自动重试（右上角有同步状态指示器）。你也可以点击右上角“导出 JSON”或“导出 CSV”保存一份本地备份。`);
+          // 启动后台重试
+          startBackgroundSync();
+        }
+      });
       return;
     }
 
+    // 如果没有配置 Apps Script URL
     render();
-    alert("已提交完成（已记录完成时间）。如需自动汇总到 Google Sheet，请先在 config.js 中配置 Apps Script Web App URL。");
+    alert("✅ 提交成功！\n\n你的问卷数据已保存在浏览器本地存储中。\n\n建议：点击右上角“导出 JSON”或“导出 CSV”保存一份本地备份。\n\n如需自动汇总到 Google Sheet，请联系管理员配置后端服务。");
   };
 
   const controls = el("div", { class: "nav" }, [
@@ -931,17 +1181,22 @@ function renderReview(stepIndex, stepCount) {
     el("button", { class: "btn primary", type: "button", onClick: onSubmit, disabled: canSubmit ? null : "true" }, ["提交完成"]),
   ]);
 
+  const lastStepIndex = steps.length - 1;
   const jump = el("div", { class: "card", style: "margin-top:14px;background:rgba(0,0,0,.12)" }, [
     el("h2", {}, ["快速跳转（可选）"]),
-    el("p", { class: "desc" }, ["如果你想返回修改某一页，可以在下方选择页面跳转。"]),
+    el("p", { class: "desc" }, ["如果你想返回修改某一页，可以在下方选择页面跳转。跳转后可以随时返回此页面继续提交。"]),
     el(
       "select",
       {
         class: "select",
+        value: "",
         onChange: (e) => {
           const v = Number(e.target.value);
           if (!Number.isFinite(v)) return;
+          // 记住当前是review页面，方便返回
+          STATE.ui._lastReviewStep = stepIndex;
           STATE.ui.step = v;
+          saveState(STATE);
           render();
         },
       },
@@ -950,6 +1205,17 @@ function renderReview(stepIndex, stepCount) {
         ...steps.map((s, i) => option(String(i), `${i + 1}/${steps.length} - ${stepTitle(s)}`)),
       ]
     ),
+    el("div", { style: "margin-top:10px" }, [
+      el("button", {
+        class: "btn secondary",
+        type: "button",
+        onClick: () => {
+          STATE.ui.step = lastStepIndex;
+          saveState(STATE);
+          render();
+        },
+      }, ["快速回到提交页面"]),
+    ]),
   ]);
 
   return el("div", {}, [card, controls, jump]);
@@ -1010,6 +1276,130 @@ function safeName(name) {
   return s.replaceAll(/[\\/:*?"<>|\\s]+/g, "_").slice(0, 40);
 }
 
+// ---------- 同步功能 ----------
+function attemptSync(endpoint, payload, retryCount, callback, endpointType = 'local') {
+  // 根据端点类型选择 API 路径
+  const apiPath = endpointType === 'local' ? '/api/submit' : '';
+  const fullUrl = endpoint + apiPath;
+  
+  fetch(fullUrl, {
+    method: "POST",
+    mode: "cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  })
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      throw new Error(`HTTP ${res.status}`);
+    })
+    .then((data) => {
+      if (data && data.ok) {
+        callback(true, "同步成功", endpointType);
+      } else {
+        throw new Error("服务器返回错误");
+      }
+    })
+    .catch((err) => {
+      console.error(`同步失败 (${endpointType}, 重试 ${retryCount}/${SYNC_RETRY_MAX}):`, err);
+      if (retryCount < SYNC_RETRY_MAX) {
+        // 重试
+        setTimeout(() => {
+          attemptSync(endpoint, payload, retryCount + 1, callback, endpointType);
+        }, SYNC_RETRY_DELAY * (retryCount + 1)); // 指数退避
+      } else {
+        callback(false, err.message || "网络错误", endpointType);
+      }
+    });
+}
+
+// 带自动降级的同步函数
+function attemptSyncWithFallback(endpointConfig, payload, retryCount, callback) {
+  const { url, type, fallback } = endpointConfig;
+  
+  attemptSync(url, payload, 0, (success, message, usedType) => {
+    if (success) {
+      callback(true, message, usedType);
+    } else {
+      // 如果主端点失败，且有备用端点，尝试备用
+      if (fallback && retryCount === 0) {
+        console.log(`主端点失败，尝试备用端点...`);
+        const fallbackConfig = {
+          url: fallback,
+          type: 'google',
+          fallback: null
+        };
+        attemptSyncWithFallback(fallbackConfig, payload, 1, callback);
+      } else {
+        callback(false, message, type);
+      }
+    }
+  }, type);
+}
+
+function startBackgroundSync() {
+  const endpointConfig = getSyncEndpoint();
+  if (!endpointConfig) return;
+  
+  const queue = loadSyncQueue();
+  if (queue.length === 0) {
+    updateSyncStatus("success");
+    return;
+  }
+  
+  // 更新同步状态
+  updateSyncStatus("syncing");
+  
+  // 处理队列中的第一个项目
+  const item = queue[0];
+  attemptSyncWithFallback(endpointConfig, item.payload, 0, (success, message, usedEndpoint) => {
+    if (success) {
+      // 同步成功，从队列中移除
+      removeFromSyncQueue(0);
+      // 继续处理下一个
+      if (loadSyncQueue().length > 0) {
+        setTimeout(startBackgroundSync, 1000);
+      } else {
+        updateSyncStatus("success");
+      }
+    } else {
+      // 同步失败，增加重试计数
+      item.retryCount++;
+      if (item.retryCount >= SYNC_RETRY_MAX * 2) {
+        // 超过最大重试次数，从队列中移除（避免无限重试）
+        removeFromSyncQueue(0);
+        updateSyncStatus("failed");
+        console.warn("同步失败次数过多，已从队列中移除");
+      } else {
+        saveSyncQueue(queue);
+      }
+      // 稍后重试（指数退避）
+      setTimeout(startBackgroundSync, SYNC_RETRY_DELAY * Math.pow(2, item.retryCount));
+    }
+  });
+}
+
+// 页面加载时检查是否有待同步的队列
+function checkPendingSync() {
+  const queue = loadSyncQueue();
+  if (queue.length > 0) {
+    console.log(`检测到 ${queue.length} 个待同步项目，开始后台同步...`);
+    updateSyncStatus("syncing");
+    startBackgroundSync();
+  }
+}
+
+// 监听网络状态，网络恢复时自动重试
+if (typeof navigator !== "undefined" && "onLine" in navigator) {
+  window.addEventListener("online", () => {
+    console.log("网络已恢复，检查待同步队列...");
+    checkPendingSync();
+  });
+}
+
 // ---------- 启动 ----------
 render();
+// 启动时检查待同步队列
+checkPendingSync();
 

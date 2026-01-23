@@ -11,7 +11,7 @@ window.SURVEY_CONFIG = {
   // LOCAL_SERVER_URL: "http://192.168.191.123:3000",
   LOCAL_SERVER_URL: "",
   // Google Apps Script Web App URL（备用）
-  APPS_SCRIPT_WEBAPP_URL: "https://script.google.com/macros/s/AKfycbwciZemrYR1DoFWnxWD4m1FNBr3OQg8CBh1xHCB2MqWrIJ-pnqlL7UmfBCTddtcDOdL/exec",
+  APPS_SCRIPT_WEBAPP_URL: "https://script.google.com/macros/s/AKfycbz9BNmWLRnM1qie68i13VtIue7eR3H7YGXfHI0LERQn2riUKnSkOKKmYUlGQ3K0iqbR/exec",
 };
   // APPS_SCRIPT_WEBAPP_URL: "https://script.google.com/macros/s/AKfycby7JVwF-e2As9XNl7PU1kDY4L5H8V3A-lhsydGphdAhObXu63qySZkGOGTGdGXErKvT7Q/exec", // Old
 // };

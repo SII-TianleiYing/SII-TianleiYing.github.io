@@ -69,7 +69,7 @@ const DATA = {
       ],
     },
     {
-key: "ab_synbio",
+  key: "ab_synbio",
   name: "子领域2：抗体工程与合成生物学（41–60）",
   questions: [
         { id: 41, text: "Zero-shot 设计的边界： AI 能否完全不依赖同源序列模版，仅根据抗原的三维结构，从零生成具有纳摩尔级亲和力的全新抗体骨架？" },
